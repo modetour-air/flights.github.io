@@ -4,7 +4,7 @@
     font-family: Modetour;
     font-weight: 700;
     font-display: swap;
-    src: url('../../fonts/ModetourB.75c8de80.woff') format("woff"), url('../../fonts/ModetourB.75c8de80.woff') format("truetype");
+    src: url("../../fonts/ModetourB.75c8de80.woff") format("woff"), url("../../fonts/ModetourB.75c8de80.woff") format("truetype");
 }
 
 /* 버튼 */
@@ -343,6 +343,7 @@ input[type="checkbox"] {
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
     display: none;
+    z-index: 99;
 }
 .dim.active {
     display: block;
