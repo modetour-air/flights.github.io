@@ -39,11 +39,12 @@ $(document).ready(function () {
     //최근검색 슬라이드
     var swiper = new Swiper(".recent_search_list", {
         pagination: {
-            el: ".swiper-pagination",
+            el: ".recent_search_list .swiper-pagination",
         },
         observer: true,
         observeParents: true,
         watchOverflow: true,
+        spaceBetween: 30,
     });
 
     //인기검색어
