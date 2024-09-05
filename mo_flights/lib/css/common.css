@@ -1,6 +1,14 @@
 @charset "utf-8";
 
+.layout {
+    padding: 0 20px;
+}
+
 /* 버튼 */
+button {
+    border: none;
+    background: none;
+}
 .btn_box button[class^="btn_type"] {
     display: inline-block;
     width: 100%;
@@ -49,6 +57,39 @@
     position: relative;
     top: -1px;
     font-size: 14px;
+}
+
+/* 레이어팝업 */
+.popup_container {
+    position: relative;
+}
+.popup_container .layer_popup_btn {
+    cursor: pointer;
+}
+.popup_container .layer_popup .icon_x {
+    display: flex;
+}
+.popup_container .layer_popup .icon_x button {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    background: url("https://www.modetour.com/icons/icon_x_18.svg");
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+.popup_container .layer_popup {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    text-align: left;
+    padding: 40px 30px;
+    display: none;
 }
 
 /* 팝업 */
@@ -123,10 +164,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 40px;
+    min-height: 46px;
     font-size: 13px;
-    padding: 0 10px;
     font-weight: 500;
+    border-top: 1px solid #d3dbd9;
 }
 .pay_select .pay_list li.active {
     background: #f5f6f6;
@@ -157,12 +198,13 @@
     justify-content: flex-end;
 }
 .pay_select .pay_list li div:nth-child(3) span {
-    font-size: 14px;
+    font-size: 17px;
     color: #009c75;
     font-weight: 700;
 }
 .pay_select .pay_list li span {
     line-height: 15px;
+    font-size: 13px;
 }
 .pay_select .pay_list li label {
     line-height: 1;
@@ -617,4 +659,334 @@ input[type="checkbox"] {
 .boarding_time .middle .terminal span:nth-child(2) {
     color: #ed4949;
 }
-/* [s] : 항공편 css */
+
+/* 헤더메뉴 */
+
+.header_wrap {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding: 12px 20px;
+}
+.header_wrap h1 {
+    margin-left: 10px;
+}
+.menu_btn {
+    position: relative;
+    z-index: 3;
+}
+.menu_nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+    overflow: hidden;
+}
+.menu_nav .close {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("https://m.modetour.com/icons/drawable/icon_x_26.svg") no-repeat center 0;
+    font-size: 0;
+    color: transparent;
+    margin: 9px 20px 9px auto;
+}
+.menu_nav .tab_area,
+.menu_nav .con_group {
+    height: 100%;
+}
+
+.line_tab {
+    position: relative;
+}
+.line_tab .line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #009b75;
+    position: absolute;
+    z-index: 2;
+    bottom: -7px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.menu_nav .line_tab .line {
+    bottom: 0;
+    width: 50%;
+    background: #000;
+    position: absolute;
+}
+.menu_nav .btn_group {
+    display: flex;
+    border-bottom: 1px #f5f5f5 solid;
+}
+.menu_nav .btn_group .btn {
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.menu_nav .btn_group .btn span {
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 700;
+}
+.menu_nav .btn_group .btn.on span {
+    color: #000;
+    position: relative;
+}
+.menu_nav .btn_group .btn.on span::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background-color: #009c75;
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+.menu_nav .con_group .con {
+    height: calc(100% - 104px);
+    padding: 30px 20px;
+    overflow-y: auto;
+}
+.menu_nav .con_group .con li {
+    margin-bottom: 30px;
+}
+.menu_nav .con_group .con li a {
+    font-weight: 700;
+    line-height: 21px;
+    font-size: 16px;
+}
+.menu_nav .con_group .banner img {
+    width: 100%;
+}
+.menu_nav .btn_box {
+    margin-bottom: 20px;
+}
+.menu_nav .btn_box button[class^="btn_type"].btn_type02 {
+    border-color: rgb(211, 219, 217);
+}
+
+/* 서브 헤더 */
+.sub_header_wrap {
+    justify-content: space-between;
+    position: relative;
+}
+.sub_header_wrap .header_tit {
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.sub_header_wrap .items {
+    display: flex;
+    gap: 14px;
+}
+
+/* tab */
+.con_group .con {
+    display: none;
+}
+.con_group .con.on {
+    display: block;
+}
+
+/* 검색 왕복,편도,다구간 */
+
+.air_search_area .ticket_tab {
+    position: relative;
+    margin-bottom: 26px;
+}
+.air_search_area .ticket_tab a span {
+    font-size: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 400;
+    padding: 0 2px;
+}
+.air_search_area .ticket_tab a.on span {
+    color: #028267;
+    font-weight: 700;
+}
+
+.air_search_area .ticket_tab .btn_group {
+    display: flex;
+    gap: 0 30px;
+}
+.air_search_area .sub_top {
+    display: flex;
+}
+.air_search_area .group_purchase {
+    margin-left: 30px;
+    position: relative;
+}
+.air_search_area .group_purchase a {
+    color: #50acfc;
+}
+.air_search_area .group_purchase .gp_label {
+    display: flex;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    gap: 0 5px;
+}
+.air_search_area .group_purchase .gp_label span {
+    font-size: 13px;
+    color: #fff;
+    padding: 5px 8px;
+    background: #397fee;
+    border-radius: 5px;
+}
+
+.booking_wrap {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d3dbd9;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+}
+.booking_wrap .booking_city {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d3dbd9;
+    position: relative;
+}
+.booking_wrap .booking_city .booking_start.active button,
+.booking_wrap .booking_city .booking_start.active input,
+.booking_wrap .booking_city .booking_end.active button,
+.booking_wrap .booking_city .booking_end.active input {
+    color: #111;
+}
+.booking_wrap .booking_city .booking_start button,
+.booking_wrap .booking_city .booking_end button {
+    font-weight: bold;
+    font-size: 20px;
+}
+.booking_wrap .booking_city input[type="text"]:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.booking_wrap .booking_city input[type="text"]::placeholder {
+    color: #8f9f9b;
+}
+.booking_wrap .booking_city .booking_add {
+    font-weight: 600;
+    margin-bottom: 5px;
+    background: none;
+    color: #d3dbd9;
+}
+.booking_wrap .booking_city input {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.booking_wrap .booking_date {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    background: #f5f6f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#multi_air .booking_wrap .booking_city {
+    padding-right: 10px;
+}
+#multi_air .booking_wrap .booking_start,
+#multi_air .booking_wrap .booking_end {
+    flex: 1;
+}
+#multi_air .booking_wrap .booking_date {
+    background: #fff;
+    width: 106px;
+}
+#multi_air .booking_wrap .booking_date .start_date {
+    flex: 1;
+}
+.booking_wrap .booking_date:hover {
+    cursor: pointer;
+    background: rgb(248 249 249);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#oneway_air.search_box .booking_wrap .booking_date {
+    justify-content: center;
+}
+.booking_wrap .booking_date .start_date,
+.booking_wrap .booking_date .end_date {
+    font-size: 15px;
+    font-weight: 600;
+}
+.booking_wrap .booking_city .booking_start,
+.booking_wrap .booking_city .booking_end,
+.booking_wrap .booking_date .start_date,
+.booking_wrap .booking_date .end_date {
+    width: 100%;
+    text-align: center;
+}
+.booking_wrap .booking_city .delete_btn {
+    width: 16px;
+    height: 16px;
+    background: url("../images/ico_delete2.svg") no-repeat center 0;
+    font-size: 0;
+    color: transparent;
+}
+.booking_wrap .booking_add {
+    padding: 0;
+    height: 53px;
+    background: #f5f6f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.booking_wrap .booking_add button {
+    width: 100%;
+    height: 100%;
+    color: #111;
+}
+.booking_wrap .booking_add button::before {
+    content: "";
+    display: inline-block;
+    margin-right: 15px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url("https://www.modetour.com/icons/icon_+_14_bk.svg") no-repeat center 0;
+}
+.search_box .passenger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 21px 0 22px;
+    font-size: 14px;
+}
+.search_box .passenger .txt {
+    display: flex;
+    align-items: center;
+}
+.search_box .passenger .txt img {
+    margin-right: 6px;
+}
+.search_box .passenger .txt span {
+    font-weight: bold;
+}

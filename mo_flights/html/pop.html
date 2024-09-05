@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
     <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+    <link rel="stylesheet" href="../lib/css/search.css" />
     <link rel="stylesheet" href="../lib/css/swiper.min.css" />
     <style>
       .btnsss .btn_wrap {
@@ -46,8 +47,7 @@
   <body>
     <div class="btnsss">
       <div class="btn_wrap">
-        <a href="#login_pop">로그인 유도</a><a href="#ticketreceivepop">항공권 수령방법</a>
-        <a href="#worktimepop">업무시간 팝업</a>
+        <a href="#login_pop">로그인 유도</a><a href="#ticketreceivepop">항공권 수령방법</a> <a href="#worktimepop">업무시간 팝업</a><a href="#searchpop">인원,좌석 선택 레이어</a>
         <div style="width: 100%">
           <div class="btn_tit">예약완료 팝업</div>
           <ul class="pop_list">
@@ -133,8 +133,1312 @@
         </div>
       </div>
     </div>
+
     <div class="dim">
       <div class="dim_in">
+        <!-- [s] : 인원,좌석 선택 레이어 -->
+        <div class="pop_cont" id="searchpop">
+          <div class="pop_over">
+            <div class="pop_top">
+              <div class="pop_tit"></div>
+              <button type="button" class="icon_x">닫기</button>
+            </div>
+            <div class="pop_in">
+              <div class="area">
+                <div class="area_tit passengers fade_btn">
+                  <img src="https://m.modetour.com/icons/icon_mypage_16.svg" alt="" width="16" height="16" />
+                  <span>성인 1</span>
+                  <span class="line">|</span>
+                  <span>일반석</span>
+                </div>
+                <!-- [s] 인원,좌석 선택 레이어 -->
+                <div class="passenger_layer fade_view">
+                  <div class="layer_cont">
+                    <p class="tit_txt">인원 선택</p>
+                    <div class="members adult">
+                      <p>성인<i class="ico_tooltip"></i></p>
+                      <div class="tooltip">
+                        <span class="bold">성인​</span>
+                        <span>국제선: 만 12세 이상(24년 기준 2012년생 생일이 지난 사람)</span>
+                        <span>국내선: 만 13세 이상(24년 기준 2011년생 생일이 지난 사람)</span>
+                      </div>
+                      <div>
+                        <button type="button" class="decrease"><span>인원수 감소</span></button>
+                        <input type="text" value="1" />
+                        <button type="button" class="increase"><span>인원수 증가</span></button>
+                      </div>
+                    </div>
+                    <div class="members child">
+                      <p>소아<i class="ico_tooltip"></i></p>
+                      <div class="tooltip">
+                        <span class="bold">소아</span>
+                        <span>국제선: 만 2세~12세 미만</span>
+                        <span>(24년 기준 만 2세 이상: 2022년생 생일이 지난 사람)</span>
+                        <span>(24년 기준 만 12세미만: 2012년생 생일이 지나지 않은 사람)</span><br />
+                        <span>국내선: 만 2세~13세 미만</span>
+                        <span>(24년 기준 만 2세 이상: 2022년생 생일이 지난 사람)</span>
+                        <span>(24년 기준 만 13세 미만: 2011년생 생일이 지나지 않은 사람)</span>
+                      </div>
+                      <div>
+                        <button type="button" class="decrease"><span>인원수 감소</span></button>
+                        <input type="text" value="0" />
+                        <button type="button" class="increase"><span>인원수 증가</span></button>
+                      </div>
+                    </div>
+                    <div class="members infant">
+                      <p>유아(만 2세 미만)<i class="ico_tooltip"></i></p>
+                      <div class="tooltip">
+                        <span class="bold">유아(만 2세 미만)</span>
+                        <span>만 2세 미만</span>
+                        <span>(24년 기준 만 2세 미만: 2022년생 생일이 지나지 않은 사람)</span>
+                      </div>
+                      <div>
+                        <button type="button" class="decrease"><span>인원수 감소</span></button>
+                        <input type="text" value="0" />
+                        <button type="button" class="increase"><span>인원수 증가</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layer_cont">
+                    <p class="tit_txt">좌석등급 선택</p>
+                    <div class="seat_chk">
+                      <ul>
+                        <li class="on">일반석</li>
+                        <li>프리미엄 일반석</li>
+                        <li>비즈니스석</li>
+                        <li>일등석</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btn_box">
+                    <button type="button" class="btn_type01">선택완료</button>
+                  </div>
+                </div>
+                <!-- [e] //인원,좌석 선택 레이어 -->
+              </div>
+              <div class="area">
+                <div class="area_tit booking_city slide_btn">
+                  <div class="city">
+                    <button type="button">SEL</button>
+                    <input placeholder="출발지" type="text" value="서울" />
+                  </div>
+                  <button type="button" class="switch"><img src="https://m.modetour.com/icons/icon_change_30.svg" alt="" /></button>
+                  <div class="city disabled">
+                    <!-- 값 입력되면 disabled클래스 삭제 -->
+                    <button type="button">IN</button>
+                    <input placeholder="도착지" type="text" value="" />
+                  </div>
+                </div>
+                <!-- [s] 도시레이어 -->
+                <div class="trip_city_layer slide_view">
+                  <div class="tab_area">
+                    <div class="tab_tit">
+                      <div class="btn_group">
+                        <button type="button" class="btn on">해외</button>
+                        <button type="button" class="btn">국내</button>
+                      </div>
+                      <button type="button" class="close"><img src="https://m.modetour.com/icons/allTour/icon_x_26.svg" alt="닫기" /></button>
+                    </div>
+                    <div class="con_group">
+                      <div class="con on">
+                        <div class="area_cont01">
+                          <ul>
+                            <li>
+                              <button type="button" class="btn01 slide_btn">동남아</button>
+                              <div class="area_cont02 slide_view">
+                                <ul>
+                                  <li><a href="#">대만(타이페이)</a></li>
+                                  <li><a href="#">대만(송산)</a></li>
+                                  <li><a href="#">방콕(수완나품)</a></li>
+                                  <li><a href="#">방콕(돈므앙)</a></li>
+                                  <li><a href="#">푸켓</a></li>
+                                  <li><a href="#">하노이</a></li>
+                                  <li><a href="#">호치민</a></li>
+                                  <li><a href="#">다낭</a></li>
+                                  <li><a href="#">나트랑</a></li>
+                                  <li><a href="#">마닐라</a></li>
+                                  <li><a href="#">세부</a></li>
+                                  <li><a href="#">보라카이</a></li>
+                                  <li><a href="#">발리</a></li>
+                                  <li><a href="#">싱가포르</a></li>
+                                  <li><a href="#">비엔티엔</a></li>
+                                  <li><a href="#">씨엠립</a></li>
+                                  <li><a href="#">코타키나발루</a></li>
+                                  <li><a href="#">쿠알라룸푸르</a></li>
+                                  <li><a href="#">울란바타르</a></li>
+                                  <li><a href="#">델리</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <button type="button" class="btn01 slide_btn">일본</button>
+                              <div class="area_cont02 slide_view">
+                                <ul>
+                                  <li><a href="#">도쿄(나리타)</a></li>
+                                  <li><a href="#">도쿄(하네다)</a></li>
+                                  <li><a href="#">오사카(간사이)</a></li>
+                                  <li><a href="#">후쿠오카</a></li>
+                                  <li><a href="#">오키나와</a></li>
+                                  <li><a href="#">삿포로</a></li>
+                                  <li><a href="#">나고야</a></li>
+                                  <li><a href="#">가고시마</a></li>
+                                  <li><a href="#">기타큐슈</a></li>
+                                  <li><a href="#">구마모토</a></li>
+                                  <li><a href="#">미야자키</a></li>
+                                  <li><a href="#">오이타</a></li>
+                                  <li><a href="#">이바라키</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <button type="button" class="btn01 slide_btn">일본</button>
+                              <div class="area_cont02 slide_view">
+                                <ul>
+                                  <li><a href="#">도쿄(나리타)</a></li>
+                                  <li><a href="#">도쿄(하네다)</a></li>
+                                  <li><a href="#">오사카(간사이)</a></li>
+                                  <li><a href="#">후쿠오카</a></li>
+                                  <li><a href="#">오키나와</a></li>
+                                  <li><a href="#">삿포로</a></li>
+                                  <li><a href="#">나고야</a></li>
+                                  <li><a href="#">가고시마</a></li>
+                                  <li><a href="#">기타큐슈</a></li>
+                                  <li><a href="#">구마모토</a></li>
+                                  <li><a href="#">미야자키</a></li>
+                                  <li><a href="#">오이타</a></li>
+                                  <li><a href="#">이바라키</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <button type="button" class="btn01 slide_btn">일본</button>
+                              <div class="area_cont02 slide_view">
+                                <ul>
+                                  <li><a href="#">도쿄(나리타)</a></li>
+                                  <li><a href="#">도쿄(하네다)</a></li>
+                                  <li><a href="#">오사카(간사이)</a></li>
+                                  <li><a href="#">후쿠오카</a></li>
+                                  <li><a href="#">오키나와</a></li>
+                                  <li><a href="#">삿포로</a></li>
+                                  <li><a href="#">나고야</a></li>
+                                  <li><a href="#">가고시마</a></li>
+                                  <li><a href="#">기타큐슈</a></li>
+                                  <li><a href="#">구마모토</a></li>
+                                  <li><a href="#">미야자키</a></li>
+                                  <li><a href="#">오이타</a></li>
+                                  <li><a href="#">이바라키</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <button type="button" class="btn01 slide_btn">일본</button>
+                              <div class="area_cont02 slide_view">
+                                <ul>
+                                  <li><a href="#">도쿄(나리타)</a></li>
+                                  <li><a href="#">도쿄(하네다)</a></li>
+                                  <li><a href="#">오사카(간사이)</a></li>
+                                  <li><a href="#">후쿠오카</a></li>
+                                  <li><a href="#">오키나와</a></li>
+                                  <li><a href="#">삿포로</a></li>
+                                  <li><a href="#">나고야</a></li>
+                                  <li><a href="#">가고시마</a></li>
+                                  <li><a href="#">기타큐슈</a></li>
+                                  <li><a href="#">구마모토</a></li>
+                                  <li><a href="#">미야자키</a></li>
+                                  <li><a href="#">오이타</a></li>
+                                  <li><a href="#">이바라키</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <button type="button" class="btn01 slide_btn">일본</button>
+                              <div class="area_cont02 slide_view">
+                                <ul>
+                                  <li><a href="#">도쿄(나리타)</a></li>
+                                  <li><a href="#">도쿄(하네다)</a></li>
+                                  <li><a href="#">오사카(간사이)</a></li>
+                                  <li><a href="#">후쿠오카</a></li>
+                                  <li><a href="#">오키나와</a></li>
+                                  <li><a href="#">삿포로</a></li>
+                                  <li><a href="#">나고야</a></li>
+                                  <li><a href="#">가고시마</a></li>
+                                  <li><a href="#">기타큐슈</a></li>
+                                  <li><a href="#">구마모토</a></li>
+                                  <li><a href="#">미야자키</a></li>
+                                  <li><a href="#">오이타</a></li>
+                                  <li><a href="#">이바라키</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="con">
+                        <div class="domestic_tit">대한민국</div>
+                        <div class="domestic_list">
+                          <ul>
+                            <li class="on">
+                              <div><span>인천</span><span>(ICN)</span></div>
+                            </li>
+                            <li>
+                              <div><span>김포</span><span>(GMP)</span></div>
+                            </li>
+                            <li>
+                              <div><span>제주</span><span>(CJU)</span></div>
+                            </li>
+                            <li>
+                              <div><span>김해(부산)</span><span>(PUS)</span></div>
+                            </li>
+                            <li>
+                              <div><span>울산</span><span>(USN)</span></div>
+                            </li>
+                            <li>
+                              <div><span>포항</span><span>(KPO)</span></div>
+                            </li>
+                            <li>
+                              <div><span>대구</span><span>(TAE)</span></div>
+                            </li>
+                            <li>
+                              <div><span>진주(사천)</span><span>(HIN)</span></div>
+                            </li>
+                            <li>
+                              <div><span>군산</span><span>(KUV)</span></div>
+                            </li>
+                            <li>
+                              <div><span>무안</span><span>(MWX)</span></div>
+                            </li>
+                            <li>
+                              <div><span>광주</span><span>(KWJ)</span></div>
+                            </li>
+                            <li>
+                              <div><span>여수</span><span>(RSU)</span></div>
+                            </li>
+                            <li>
+                              <div><span>양양</span><span>(YNY)</span></div>
+                            </li>
+                            <li>
+                              <div><span>원주</span><span>(WJU)</span></div>
+                            </li>
+                            <li>
+                              <div><span>청주</span><span>(CJJ)</span></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- [e] //도시레이어 -->
+                <!-- [s] 도시검색 레이어 -->
+                <div class="city_search_layer layer_popup">
+                  <div class="city_list">
+                    <p class="tit">베트남</p>
+                    <dl class="dl">
+                      <dt class="dt">다낭 (Danang), 베트남</dt>
+                      <dd class="dd">DAD | 다낭 (Danang)</dd>
+                    </dl>
+                  </div>
+                  <div class="city_list">
+                    <p class="tit">베트필리핀남</p>
+                    <dl class="dl">
+                      <dt class="dt">세부 (Cebu), 필리핀</dt>
+                      <dd class="dd">CEB l 세부 (Cebu)</dd>
+                    </dl>
+                  </div>
+                  <div class="city_list">
+                    <p class="tit">베트남</p>
+                    <dl class="dl">
+                      <dt class="dt">프랑크푸르트 (Frankfurt), 독일</dt>
+                      <dd class="dd">DAD | 다낭 (Danang)</dd>
+                      <dt class="dt">다낭 (Danang), 베트남</dt>
+                      <dd class="dd">DAD | 다낭 (Danang)</dd>
+                    </dl>
+                  </div>
+                  <div class="city_list">
+                    <p class="tit">말레이시아</p>
+                    <dl class="dl">
+                      <dt class="dt">쿠알라룸푸르 (Kualalumpur), 말레이시아</dt>
+                      <dd class="dd">KUL l 쿠알라룸푸르 (Kualalumpur)</dd>
+                    </dl>
+                  </div>
+                  <div class="city_list">
+                    <p class="tit">베트남</p>
+                    <dl class="dl">
+                      <dt class="dt">다낭 (Danang), 베트남</dt>
+                      <dd class="dd">DAD | 다낭 (Danang)</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- [e] //도시검색 레이어 -->
+              </div>
+              <div class="area">
+                <div class="area_tit scheduled slide_btn">
+                  <div class="date">2024.09.25(수) ~ 2024.09.27(금)</div>
+                  <img src="https://m.modetour.com/icons/icon__26.svg" width="26" alt="" class="arrow" />
+                </div>
+                <!-- [s] 달력 -->
+                <div class="calendar_wrap slide_view">
+                  <div class="calendar_list">
+                    <div class="calendar_header">
+                      <p class="calendar_day">2024.9</p>
+                    </div>
+                    <div class="calendar_area">
+                      <table class="calendar_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sun">
+                              <div><span>일</span></div>
+                            </th>
+                            <th scope="col" class="mon">
+                              <div><span>월</span></div>
+                            </th>
+                            <th scope="col" class="tue">
+                              <div><span>화</span></div>
+                            </th>
+                            <th scope="col" class="wen">
+                              <div><span>수</span></div>
+                            </th>
+                            <th scope="col" class="thu">
+                              <div><span>목</span></div>
+                            </th>
+                            <th scope="col" class="fri">
+                              <div><span>금</span></div>
+                            </th>
+                            <th scope="col" class="sat">
+                              <div><span>토</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box disabled"><span class="date">1</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box disabled"><span class="date">2</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box disabled"><span class="date">3</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box disabled"><span class="date">4</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box disabled"><span class="date">5</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun start_range">
+                              <div class="in_box">
+                                <span class="date">6</span>
+                                <span class="txt">가는 날</span>
+                              </div>
+                            </td>
+                            <td class="mon chk_range">
+                              <div class="in_box"><span class="date">7</span></div>
+                            </td>
+                            <td class="tue chk_range">
+                              <div class="in_box"><span class="date">8</span></div>
+                            </td>
+                            <td class="wen holiday chk_range">
+                              <div class="in_box"><span class="date">9</span></div>
+                            </td>
+                            <td class="thu chk_range">
+                              <div class="in_box"><span class="date">10</span></div>
+                            </td>
+                            <td class="fri chk_range">
+                              <div class="in_box"><span class="date">11</span></div>
+                            </td>
+                            <td class="sat chk_range">
+                              <div class="in_box"><span class="date">12</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun chk_range">
+                              <div class="in_box"><span class="date">13</span></div>
+                            </td>
+                            <td class="mon end_range">
+                              <div class="in_box">
+                                <span class="date">14</span>
+                                <span class="txt">오는 날</span>
+                              </div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">15</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">16</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">17</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">18</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">19</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">20</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">21</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">22</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">23</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">24</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">25</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">26</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">27</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">28</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">29</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">30</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">31</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="calendar_list">
+                    <div class="calendar_header">
+                      <p class="calendar_day">2024.10</p>
+                    </div>
+                    <div class="calendar_area">
+                      <table class="calendar_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sun">
+                              <div><span>일</span></div>
+                            </th>
+                            <th scope="col" class="mon">
+                              <div><span>월</span></div>
+                            </th>
+                            <th scope="col" class="tue">
+                              <div><span>화</span></div>
+                            </th>
+                            <th scope="col" class="wen">
+                              <div><span>수</span></div>
+                            </th>
+                            <th scope="col" class="thu">
+                              <div><span>목</span></div>
+                            </th>
+                            <th scope="col" class="fri">
+                              <div><span>금</span></div>
+                            </th>
+                            <th scope="col" class="sat">
+                              <div><span>토</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box disabled"><span class="date">1</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box disabled"><span class="date">2</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box disabled"><span class="date">3</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box disabled"><span class="date">4</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box disabled"><span class="date">5</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">6</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">7</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">8</span></div>
+                            </td>
+                            <td class="wen holiday">
+                              <div class="in_box"><span class="date">9</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">10</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">11</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">12</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">13</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">14</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">15</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">16</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">17</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">18</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">19</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">20</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">21</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">22</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">23</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">24</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">25</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">26</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">27</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">28</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">29</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">30</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">31</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="calendar_list">
+                    <div class="calendar_header">
+                      <p class="calendar_day">2024.11</p>
+                    </div>
+                    <div class="calendar_area">
+                      <table class="calendar_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sun">
+                              <div><span>일</span></div>
+                            </th>
+                            <th scope="col" class="mon">
+                              <div><span>월</span></div>
+                            </th>
+                            <th scope="col" class="tue">
+                              <div><span>화</span></div>
+                            </th>
+                            <th scope="col" class="wen">
+                              <div><span>수</span></div>
+                            </th>
+                            <th scope="col" class="thu">
+                              <div><span>목</span></div>
+                            </th>
+                            <th scope="col" class="fri">
+                              <div><span>금</span></div>
+                            </th>
+                            <th scope="col" class="sat">
+                              <div><span>토</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box disabled"><span class="date">1</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box disabled"><span class="date">2</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box disabled"><span class="date">3</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box disabled"><span class="date">4</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box disabled"><span class="date">5</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">6</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">7</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">8</span></div>
+                            </td>
+                            <td class="wen holiday">
+                              <div class="in_box"><span class="date">9</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">10</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">11</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">12</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">13</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">14</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">15</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">16</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">17</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">18</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">19</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">20</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">21</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">22</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">23</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">24</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">25</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">26</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">27</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">28</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">29</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">30</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">31</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="calendar_list">
+                    <div class="calendar_header">
+                      <p class="calendar_day">2024.12</p>
+                    </div>
+                    <div class="calendar_area">
+                      <table class="calendar_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sun">
+                              <div><span>일</span></div>
+                            </th>
+                            <th scope="col" class="mon">
+                              <div><span>월</span></div>
+                            </th>
+                            <th scope="col" class="tue">
+                              <div><span>화</span></div>
+                            </th>
+                            <th scope="col" class="wen">
+                              <div><span>수</span></div>
+                            </th>
+                            <th scope="col" class="thu">
+                              <div><span>목</span></div>
+                            </th>
+                            <th scope="col" class="fri">
+                              <div><span>금</span></div>
+                            </th>
+                            <th scope="col" class="sat">
+                              <div><span>토</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box disabled"><span class="date">1</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box disabled"><span class="date">2</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box disabled"><span class="date">3</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box disabled"><span class="date">4</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box disabled"><span class="date">5</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">6</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">7</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">8</span></div>
+                            </td>
+                            <td class="wen holiday">
+                              <div class="in_box"><span class="date">9</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">10</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">11</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">12</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">13</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">14</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">15</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">16</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">17</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">18</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">19</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">20</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">21</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">22</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">23</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">24</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">25</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">26</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">27</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">28</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">29</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">30</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">31</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="calendar_list">
+                    <div class="calendar_header">
+                      <p class="calendar_day">2024.12</p>
+                    </div>
+                    <div class="calendar_area">
+                      <table class="calendar_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sun">
+                              <div><span>일</span></div>
+                            </th>
+                            <th scope="col" class="mon">
+                              <div><span>월</span></div>
+                            </th>
+                            <th scope="col" class="tue">
+                              <div><span>화</span></div>
+                            </th>
+                            <th scope="col" class="wen">
+                              <div><span>수</span></div>
+                            </th>
+                            <th scope="col" class="thu">
+                              <div><span>목</span></div>
+                            </th>
+                            <th scope="col" class="fri">
+                              <div><span>금</span></div>
+                            </th>
+                            <th scope="col" class="sat">
+                              <div><span>토</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box disabled"><span class="date">1</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box disabled"><span class="date">2</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box disabled"><span class="date">3</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box disabled"><span class="date">4</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box disabled"><span class="date">5</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">6</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">7</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">8</span></div>
+                            </td>
+                            <td class="wen holiday">
+                              <div class="in_box"><span class="date">9</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">10</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">11</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">12</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">13</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">14</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">15</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">16</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">17</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">18</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">19</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">20</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">21</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">22</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">23</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">24</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">25</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">26</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">27</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">28</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">29</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">30</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">31</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="calendar_list">
+                    <div class="calendar_header">
+                      <p class="calendar_day">2024.12</p>
+                    </div>
+                    <div class="calendar_area">
+                      <table class="calendar_table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sun">
+                              <div><span>일</span></div>
+                            </th>
+                            <th scope="col" class="mon">
+                              <div><span>월</span></div>
+                            </th>
+                            <th scope="col" class="tue">
+                              <div><span>화</span></div>
+                            </th>
+                            <th scope="col" class="wen">
+                              <div><span>수</span></div>
+                            </th>
+                            <th scope="col" class="thu">
+                              <div><span>목</span></div>
+                            </th>
+                            <th scope="col" class="fri">
+                              <div><span>금</span></div>
+                            </th>
+                            <th scope="col" class="sat">
+                              <div><span>토</span></div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box disabled"><span class="date">1</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box disabled"><span class="date">2</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box disabled"><span class="date">3</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box disabled"><span class="date">4</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box disabled"><span class="date">5</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">6</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">7</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">8</span></div>
+                            </td>
+                            <td class="wen holiday">
+                              <div class="in_box"><span class="date">9</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">10</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">11</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">12</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">13</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">14</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">15</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">16</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">17</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">18</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">19</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">20</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">21</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">22</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">23</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">24</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date">25</span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date">26</span></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="sun">
+                              <div class="in_box"><span class="date">27</span></div>
+                            </td>
+                            <td class="mon">
+                              <div class="in_box"><span class="date">28</span></div>
+                            </td>
+                            <td class="tue">
+                              <div class="in_box"><span class="date">29</span></div>
+                            </td>
+                            <td class="wen">
+                              <div class="in_box"><span class="date">30</span></div>
+                            </td>
+                            <td class="thu">
+                              <div class="in_box"><span class="date">31</span></div>
+                            </td>
+                            <td class="fri">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                            <td class="sat">
+                              <div class="in_box"><span class="date"></span></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- [e] //달력 -->
+              </div>
+              <div class="area recent_search_area">
+                <div class="recent_search">
+                  <div class="txt"><span>최근검색</span><span class="delete">전체삭제</span></div>
+                  <div class="swiper recent_search_list">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="wrap">
+                          <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                          <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                          <button type="button" class="delete">삭제</button>
+                        </div>
+                        <div class="wrap">
+                          <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                          <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                          <button type="button" class="delete">삭제</button>
+                        </div>
+                        <div class="wrap">
+                          <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                          <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                          <button type="button" class="delete">삭제</button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="wrap">
+                          <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                          <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                          <button type="button" class="delete">삭제</button>
+                        </div>
+                        <div class="wrap">
+                          <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                          <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                          <button type="button" class="delete">삭제</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_box select_complete">
+                <button type="button" class="btn_type01">선택완료</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [e] : 인원,좌석 선택 레이어 -->
         <!-- [s] : 로그인유도 팝업 -->
         <div class="pop login_pop" id="login_pop">
           <div class="pop_in">
@@ -4188,6 +5492,42 @@
     <script src="../lib/js/swiper.min.js"></script>
     <script>
       $(document).ready(function () {
+        //도시검색
+        $(".booking_city").click(function () {
+          $(this).closest(".area").toggleClass("on");
+          return false;
+        });
+        $(".btn01").click(function () {
+          $(this).closest("li").toggleClass("on");
+          return false;
+        });
+        $(".trip_city_layer .close").click(function () {
+          $(this).closest(".trip_city_layer").slideToggle(150);
+          $(this).closest(".area").toggleClass("on");
+          return false;
+        });
+        //input text확인용으로 개발 시 수정 必
+        $(".city input").on("input", function () {
+          $(".city_search_layer").show();
+        });
+
+        //달력
+        $(".scheduled").click(function () {
+          $(this).closest(".area").toggleClass("on");
+          return false;
+        });
+
+        //최근검색 슬라이드
+        var swiper = new Swiper(".recent_search_list", {
+          pagination: {
+            el: ".recent_search_list .swiper-pagination",
+          },
+          observer: true,
+          observeParents: true,
+          watchOverflow: true,
+          spaceBetween: 20,
+        });
+
         // 모두투어 현지투어 추천상품 swiper
         var reserveconfirmpop_slide = new Swiper("#reserveconfirmpop .swiper", {
           slidesPerView: 2,
@@ -4224,7 +5564,7 @@
         });
 
         //팝업닫기
-        $(".pop .close").click(function () {
+        $(".pop .close,.pop_cont .icon_x").click(function () {
           $(".dim").removeClass("active");
           $(this).parents(".pop").hide();
           return false;
