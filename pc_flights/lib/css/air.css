@@ -2304,3 +2304,73 @@ main {
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-prev.swiper-button-disabled {
   opacity: 1;
 }
+.mypagedetail .reservedetail .service_banner {
+  display: flex;
+  margin-top: 20px;
+}
+.mypagedetail .reservedetail .service_banner .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mypagedetail .reservedetail .service_banner .left .top {
+  color: #09a7e4;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 0 45px;
+}
+.mypagedetail .reservedetail .service_banner .middle {
+  width: 180px;
+  text-align: center;
+  margin: 12px auto;
+}
+.mypagedetail .reservedetail .service_banner .middle img {
+  max-width: 100%;
+}
+.mypagedetail .reservedetail .service_banner .middle2 {
+  display: flex;
+  column-gap: 95px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 45px;
+  border-bottom: 1px #e5e7eb solid;
+}
+.mypagedetail .reservedetail .service_banner .middle2 button {
+  background: #009c75;
+  border-radius: 5px;
+  color: #fff;
+  width: 130px;
+  height: 46px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.mypagedetail .reservedetail .service_banner .bottom {
+  display: flex;
+  padding: 12px 0;
+}
+.mypagedetail .reservedetail .service_banner .bottom > div {
+  flex: 1;
+  text-align: center;
+  border-left: 1px #e5e7eb solid;
+}
+.mypagedetail .reservedetail .service_banner .bottom > div:first-child {
+  border: 0;
+}
+.mypagedetail .reservedetail .service_banner .bottom .ico1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .service_banner .bottom .ico1 span {
+  margin-right: 5px;
+}
+.mypagedetail .reservedetail .service_banner .bottom p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #707070;
+  margin-top: 5px;
+}
+.mypagedetail .reservedetail .service_banner .right {
+  background: #ebecf1;
+}
