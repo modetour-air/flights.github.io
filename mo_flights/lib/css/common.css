@@ -59,6 +59,15 @@ button {
     font-size: 14px;
 }
 
+.btn_box button[class^="btn_type"].btn_type05 {
+    background: #f0f0f0;
+}
+.btn_box button[class^="btn_type"].btn_type06 {
+    background: #111;
+    border: 1px #111 solid;
+    line-height: 35px;
+    color: #fff;
+}
 /* 레이어팝업 */
 .popup_container {
     position: relative;
