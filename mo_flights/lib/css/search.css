@@ -76,6 +76,13 @@
     border: 1px #d3dbd9 solid;
     border-radius: 32px;
     padding: 4px 16px;
+    transition: 0.3s;
+    outline: 0;
+}
+.flight_course .result_section .data_re.on {
+    color: #009c75;
+    border: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
 }
 .flight_course .result_section .data_re span {
     color: inherit;
@@ -240,7 +247,7 @@
 }
 .ticket_container .flight_item .item_details_top .detail02 .detail02_2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -256,12 +263,14 @@
     color: #fff;
     font-size: 11px;
     font-weight: 700;
+    margin-top: 4px;
 }
 .ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line {
     width: 73px;
     height: 2px;
     background: #d3dbd9;
     position: relative;
+    margin-top: 8px;
 }
 .ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line::before,
 .ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line::after {
@@ -470,6 +479,16 @@
     display: flex;
     margin-top: 10px;
 }
+.ticket_container .flight_item.active .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.ticket_container .flight_item.active .price .num {
+    color: #009b75;
+    font-weight: 700;
+}
 .ticket_container .flight_item.active .detail01 {
     display: flex;
     flex-direction: column;
@@ -487,21 +506,6 @@
 .ticket_container .flight_item.active .detail02 {
     margin: 0 8px;
 }
-.ticket_container .blue {
-    border: 1px solid #0075e9;
-    color: #0075e9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 21px;
-    border-radius: 4px;
-}
-.ticket_container .blue span {
-    color: inherit;
-    font-size: 11px;
-    padding: 0 8px;
-}
-
 .filter_cont {
     background: #fff;
     z-index: 2;

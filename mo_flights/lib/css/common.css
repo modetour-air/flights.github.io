@@ -60,13 +60,19 @@ button {
 }
 
 .btn_box button[class^="btn_type"].btn_type05 {
-    background: #f0f0f0;
+    border: 1px solid #009c75;
+    color: #009c75;
 }
 .btn_box button[class^="btn_type"].btn_type06 {
     background: #111;
     border: 1px #111 solid;
     line-height: 35px;
     color: #fff;
+}
+.btn_box button[class^="btn_type"].btn_type07 {
+    border: none;
+    background: #eee;
+    color: #555;
 }
 /* 레이어팝업 */
 .popup_container {
@@ -491,6 +497,7 @@ input[type="checkbox"] {
     top: 60px;
     overflow-y: scroll;
     display: none;
+    z-index: 9;
 }
 .select_box .select_option::-webkit-scrollbar {
     width: 8px;
@@ -638,7 +645,7 @@ input[type="checkbox"] {
 .boarding_time .boardinfo .bottom .ant_img {
     width: 15px;
     height: 15px;
-    display: inline-block;
+    display: flex;
     margin-right: 5px;
 }
 .boarding_time .boardinfo .bottom .ant_img img {
@@ -998,4 +1005,68 @@ input[type="checkbox"] {
 }
 .search_box .passenger .txt span {
     font-weight: bold;
+}
+
+.st01 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.st01 span {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 21px;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 0 8px;
+}
+.st01 .blue01 {
+    border: 1px solid #0075e9;
+    color: #0075e9 !important;
+}
+.st01 .blue02 {
+    border: 1px #0075e9 solid;
+    background: #0075e9;
+    color: #fff !important;
+}
+.st01 .purple01 {
+    background: #8100e2;
+    color: #fff !important;
+}
+.st01 .red01 {
+    border: 1px solid #ed4949;
+    color: #ed4949 !important;
+}
+
+.st02 {
+    text-align: right;
+}
+.st02 span {
+    color: #009c75;
+    font-weight: 700;
+    font-size: 12px;
+}
+.st02 span::after {
+    content: "";
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: url("https://www.modetour.com/icons/icon_alert_15_solid.svg") no-repeat center 0;
+    margin-left: 5px;
+}
+.fix_btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 20px 26px 20px;
+    background: #fff;
+    border-top: 1px #e5e7eb solid;
+}
+.fix_btn .btn_box {
+    display: flex;
+    gap: 0 15px;
 }
