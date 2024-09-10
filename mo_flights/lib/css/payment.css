@@ -508,6 +508,127 @@
   color: #888;
   margin-top: 10px;
 }
+.payment_layout .coupon_wrap .coupon_list {
+  margin-top: 40px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li {
+  width: 100%;
+  border-width: 1px 0px 1px 1px;
+  border-color: #d3d3d3;
+  border-style: solid;
+  position: relative;
+  overflow: hidden;
+  height: 105px;
+  margin-top: 10px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li:first-child {
+  margin-top: 0;
+}
+.payment_layout .coupon_wrap .coupon_list ul li:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-width: 1px 0px 1px 1px;
+  border-color: #d3d3d3;
+  border-style: solid;
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  margin-top: -14px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 5;
+}
+.payment_layout .coupon_wrap .coupon_list ul li:after {
+  content: "";
+  display: block;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  width: 1px;
+  background: #d3d3d3;
+}
+.payment_layout .coupon_wrap .coupon_list ul li a {
+  color: #111;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.payment_layout .coupon_wrap .coupon_list ul li i {
+  display: flex;
+  background: #fcf7ef;
+  width: 40px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.payment_layout .coupon_wrap .coupon_list ul li i svg {
+  width: 15px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li .txt_wrap {
+  height: 100%;
+  padding: 20px;
+  width: calc(100% - 40px);
+}
+.payment_layout .coupon_wrap .coupon_list .notice {
+  margin-top: 20px;
+}
+.payment_layout .coupon_wrap .coupon_list .txt1 {
+  font-size: 15px;
+}
+.payment_layout .coupon_wrap .coupon_list .txt1 span {
+  font-size: 19px;
+  font-weight: 700;
+}
+.payment_layout .coupon_wrap .coupon_list .txt2 {
+  margin-top: 5px;
+  line-height: 22px;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.payment_layout .coupon_wrap .coupon_list .txt3 {
+  margin-top: 5px;
+  font-size: 15px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active {
+  border-color: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active i {
+  background: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active i svg {
+  fill: #fff;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active:before {
+  border-color: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active:after {
+  background: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list .notice {
+  color: #555;
+  font-size: 15px;
+  line-height: 22px;
+}
+.payment_layout .coupon_wrap .coupon_list .notice > div {
+  position: relative;
+  padding-left: 10px;
+}
+.payment_layout .coupon_wrap .coupon_list .notice > div:before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #555;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
 .payment_layout .coupon_wrap .fix_bottom {
   position: fixed;
   bottom: 0;
@@ -571,6 +692,65 @@
   position: absolute;
   left: 0;
   top: 9px;
+}
+.payment_layout .coupon_wrap .usecoupon_area {
+  padding-top: 30px;
+}
+.payment_layout .coupon_wrap .usecoupon_area .tit {
+  font-size: 15px;
+  padding-bottom: 0;
+}
+.payment_layout .coupon_wrap .coupon_con {
+  background: #f8f8f8;
+  margin-top: 20px;
+  padding: 20px;
+  min-height: 105px;
+  display: flex;
+  justify-content: space-between;
+}
+.payment_layout .coupon_wrap .coupon_con p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+}
+.payment_layout .coupon_wrap .coupon_con p span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+.payment_layout .coupon_wrap .coupon_con .c_detail {
+  font-size: 15px;
+  line-height: 20px;
+  color: #555;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
+  overflow: hidden;
+}
+.payment_layout .coupon_wrap .coupon_con .c_detail span {
+  font-size: 21px;
+  font-weight: 700;
+  color: #111;
+}
+.payment_layout .coupon_wrap .coupon_con .c_detail span.date {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.payment_layout .coupon_wrap .coupon_con button {
+  font-size: 13px;
+  border: 1px #d3d3d3 solid;
+  border-radius: 5px;
+  background: #fff;
+  height: 30px;
+  width: 75px;
 }
 /* [e] : 할인쿠폰창 */
 /* [s] : 마일리지창 */
