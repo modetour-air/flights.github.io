@@ -33,21 +33,60 @@
                 <div class="tit">예약내역 상세</div>
                 <div class="sub_top">
                   <ul>
-                    <li>취소</li>
+                    <li>확약</li>
+                    <li>요금확정</li>
+                    <li>롯데카드</li>
                   </ul>
+                  <p>비행기 탑승 <span>164일</span> 전입니다.</p>
                 </div>
-                <!-- 취소시 cancle추가 -->
-                <div class="passport_cation cancle">
-                  <div class="left">
-                    <span style="width: 15px; display: inline-block"
-                      ><svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g data-name="그룹 475377" id="그룹_475377" transform="translate(-673 -356)"><circle cx="8" cy="8" data-name="타원 1691" fill="#111" id="타원_1691" r="8" transform="translate(673 356)"></circle><text data-name="!" fill="#fff" font-family="Pretendard-SemiBold, Pretendard" font-size="13" font-weight="600" id="_" transform="translate(679 369)"><tspan x="0" y="0">!</tspan></text></g></svg></span
-                    >취소된 예약입니다.
+                <div class="progress">
+                  <div>
+                    <div class="left"></div>
+                    <div>예약완료</div>
+                    <div class="right"></div>
                   </div>
+                  <div class="on">
+                    <div class="left"></div>
+                    <div>결제하기</div>
+                    <div class="right"></div>
+                  </div>
+                  <div>
+                    <div class="left"></div>
+                    <div>발권완료</div>
+                    <div class="right"></div>
+                  </div>
+                </div>
+                <div class="service_banner">
+                    <div class="left">
+                        <div class="top">
+                            <span><img src="https://www.modetour.dev/images/flights/AI.png" alt=""></span>
+                            5인 떨어져 앉을 확률 79%입니다.
+                        </div>
+                        <div class="middle"><img src="https://cdn.ags-aws.com/dev/ass/recm/multi_79.gif" alt=""></div>
+                        <div class="middle2">
+                            <div>5인 같이 앉으시겠어요?</div>
+                            <div><button>네</button></div>
+                        </div>
+                        <div class="bottom">
+                            <div>
+                                <div class="ico1"><span><img src="https://www.modetour.dev/images/flights/baggage.png" alt=""></span>수하물 추가</div>
+                                <p>공항보다 최대40% 할인</p>
+                            </div>
+                            <div>
+                                <div class="ico1"><span><img src="https://www.modetour.dev/images/flights/fork_and_knife.png" alt=""></span>기내식 신청</div>
+                                <p>D-3일까지만 신청</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="https://www.modetour.dev/images/flights/flight_seats.png" alt="">
+                    </div>
                 </div>
                 <div class="airschedule">
                   <div>
                     <div class="tit1">
                       <div class="sch_tit">가는 항공편</div>
+                      <div class="reserve_num">항공사 예약번호 : 5V5QYF</div>
                     </div>
                     <div class="tit2">
                       <div>타이페이(TPE)</div>
@@ -55,6 +94,7 @@
                         <img src="https://www.modetour.com/icons/icon_arrow_oneway_20.svg" alt="" />
                       </div>
                       <div>서울(ICN)</div>
+                      <div class="st01"><span class="blue02">할인가</span></div>
                     </div>
                     <div class="tit3">2025.01.24(금) 14:30</div>
                     <div class="air">
@@ -64,6 +104,7 @@
                   <div>
                     <div class="tit1">
                       <div class="sch_tit">오는 항공편</div>
+                      <div class="reserve_num">항공사 예약번호 : 5V5QYF</div>
                     </div>
                     <div class="tit2">
                       <div>서울(ICN)</div>
@@ -71,6 +112,7 @@
                         <img src="https://www.modetour.com/icons/icon_arrow_oneway_20.svg" alt="" />
                       </div>
                       <div>타이페이(TPE)</div>
+                      <div class="st01"><span class="purple01">특가</span></div>
                     </div>
                     <div class="tit3">2025.01.24(금) 14:30</div>
                     <div class="air">
@@ -116,20 +158,68 @@
                       <div>상담시간 전화상담 : 평일 월~금 09시~18시<br />온라인문의글 등록 : 평일 월~금 09시~17시 30분</div>
                     </div>
                   </div>
+                  <!-- 
+                  정보 미등록시 incomplete 추가
+                  정보 등록시 complete 추가 
+                  -->
+                  <div class="right incomplete">
+                    <div class="r_tit">
+                      정보등록
+                      <div style="width: 15px; color: rgb(237, 73, 73)">
+                        <svg height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15" width="100%" xmlns="http://www.w3.org/2000/svg">
+                          <g id="icon_alert_red_15" transform="translate(-703.4 -760.576)">
+                            <g data-name="타원 1690" fill="none" id="타원_1690" stroke="currentcolor" stroke-width="1.3" transform="translate(703.4 760.576)">
+                              <circle cx="7.5" cy="7.5" r="7.5" stroke="none"></circle>
+                              <circle cx="7.5" cy="7.5" fill="none" r="6.85"></circle>
+                            </g>
+                            <g data-name="그룹 2602" id="그룹_2602" transform="translate(709.977 764.006)">
+                              <path d="M765.848,796.288h0c-.263,0-.485-.107-.5-.245l-.394-4.745a.853.853,0,0,1,.891-.891h0a.853.853,0,0,1,.891.891l-.394,4.745C766.334,796.181,766.111,796.288,765.848,796.288Z" data-name="패스 13758" fill="currentcolor" id="패스_13758" transform="translate(-764.923 -790.407)"></path>
+                              <circle cx="0.768" cy="0.768" data-name="타원 1689" fill="currentcolor" id="타원_1689" r="0.768" transform="translate(0 7.784) rotate(-76.669)"></circle>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>
+                        <span>여권정보</span>
+                        <button>미등록</button>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="infor_box"><button>동의한 규정</button><button>문의하기</button></div>
+                <div class="infor_box"><button>동의한 규정</button><button>인보이스 인쇄</button><button>마일리지</button><button>문의하기</button></div>
                 <div class="pay_box">
                   <div class="left">
                     <div class="t_1">
-                      <div>총 합계 금액</div>
-                      <div><span>2,359,300</span>원</div>
+                      <div>최종 결제금액</div>
+                      <div><span>1,718,000</span>원</div>
                     </div>
                     <div class="t_2">
+                      <div class="btn_box">
+                        <button>결제요금 상세</button>
+                        <button>결제내역 상세</button>
+                      </div>
                       <div class="mile"><span>1인당 1,231 마일</span> 적립예정</div>
                     </div>
-                    <div class="t_3">결제상태: 미완료<br /></div>
+                    <div class="t_3">결제상태: 미완료<br />결제요청가능시간 : 월~금 09:00 ~ 17:00 (주말/공휴일 불가)</div>
+                    <!-- 현금결제시  -->
+                     <div class="cash_notice">
+                      <div>입금대기금액 : <span>848,200</span>원</div>
+                      <div>입금대기시한 : <span class="red">08.22(목) 17시</span>까지</div>
+                      <div>가상 계좌번호 : 신한은행 56216443364577</div>
+                     </div>
+                  </div>
+                  <div class="right">
+                    <div class="t_1 btn_box">
+                        <button type="button" class="btn_type01">결제하기</button>
+                        <button type="button" class="btn_type02">예약취소</button>
+                    </div>
+                    <div class="t_2">결제시한 : <span>2024.08.14 17:00까지</span></div>
+                    <div class="t_3">* 결제마감시한은 변경될 수 있습니다.</div>
                   </div>
                 </div>
+                <div class="pay_notice">*유류할증료와 제세공과금은 항공사 사정 및 환율변동에 의해 매일 변경되며 발권 당일 환율에 따라 적용됩니다.</div>
               </div>
               <div class="box_2">
                 <div class="tit">예약자 및 탑승자 목록</div>
@@ -142,7 +232,8 @@
                     <div class="please">*<span>2025-01-20 21:00</span> 이전까지 등록해 주세요. 여권정보 입력 후 결제해 주시기 바랍니다.</div>
                     <div class="passenger">
                       <div class="p_tit">
-                        성인 1<span>(취소 된 예약입니다. )</span>
+                        성인 1
+                        <div class="right">모두멤버스 회원번호 MT10460080 / <span>1,213 마일</span> 적립예정</div>
                       </div>
                       <table>
                         <colgroup>
@@ -167,13 +258,81 @@
                           <th>이메일</th>
                           <td>7448357@modetour.com</td>
                           <th>여권번호</th>
-                          <td><input type="text" placeholder="M12345678" disabled /></td>
+                          <td><input type="text" placeholder="M12345678" /></td>
                         </tr>
                         <tr>
                           <th>여권만료일</th>
                           <!-- 잘못된 값 입력시 caution 추가 -->
+                          <td class="caution">
+                            <input type="text" placeholder="20260101" />
+                            <p>유효하지 않은 만료일</p>
+                          </td>
+                          <th>국적</th>
                           <td>
-                            <input type="text" placeholder="20260101" disabled />
+                            <div class="select_box">
+                              <div class="select_layer">
+                                <div>대한민국</div>
+                              </div>
+                              <div class="select_option scroll_hidden">
+                                <ul>
+                                  <li class="active"><span>대한민국</span></li>
+                                  <li><span>일본</span></li>
+                                  <li><span>중국</span></li>
+                                  <li><span>일본</span></li>
+                                  <li><span>중국</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </td>
+                          <th>여권발행국</th>
+                          <td>
+                            <div class="select_box">
+                              <div class="select_layer">
+                                <div>대한민국</div>
+                              </div>
+                              <div class="select_option scroll_hidden">
+                                <ul>
+                                  <li class="active"><span>대한민국</span></li>
+                                  <li><span>일본</span></li>
+                                  <li><span>중국</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <div class="p_tit">
+                        성인 2
+                      </div>
+                      <table>
+                        <colgroup>
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+                        <tr>
+                          <th>이름</th>
+                          <td>김모두<br />KIM MODE</td>
+                          <th>생년월일</th>
+                          <td>2024.08.04</td>
+                          <th>성별</th>
+                          <td>성인(여)</td>
+                        </tr>
+                        <tr>
+                          <th>연락처</th>
+                          <td>010-1234-5678</td>
+                          <th>이메일</th>
+                          <td>7448357@modetour.com</td>
+                          <th>여권번호</th>
+                          <td><input type="text" placeholder="M12345678" /></td>
+                        </tr>
+                        <tr>
+                          <th>여권만료일</th>
+                          <td>
+                            <input type="text" placeholder="20260101" />
                           </td>
                           <th>국적</th>
                           <td>
