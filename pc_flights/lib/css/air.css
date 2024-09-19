@@ -1640,19 +1640,21 @@ main {
     border-width: 1px;
     border-style: solid;
 }
-.mypagedetail .reservedetail .infor_wrap .right.incomplete {
-    border-color: #ed4949;
+.mypagedetail .reservedetail .infor_wrap .incomplete {
+    border: 1px solid #ed4949;
+    background: #fff;
 }
-.mypagedetail .reservedetail .infor_wrap .right.complete {
-    border-color: #009c75;
+.mypagedetail .reservedetail .infor_wrap .complete {
+    border: 1px solid #009c75;
+    background: #fff;
 }
-.mypagedetail .reservedetail .infor_wrap .right.complete .r_tit {
+.mypagedetail .reservedetail .infor_wrap .complete .r_tit {
+    color: #009c75 !important;
+}
+.mypagedetail .reservedetail .infor_wrap .complete svg {
     color: #009c75;
 }
-.mypagedetail .reservedetail .infor_wrap .right.complete svg {
-    color: #009c75;
-}
-.mypagedetail .reservedetail .infor_wrap .right .r_tit {
+.mypagedetail .reservedetail .infor_wrap .r_tit {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
@@ -1888,6 +1890,7 @@ main {
 }
 .mypagedetail .reservedetail .tab_wrap table {
     border-top: 2px #111 solid;
+    width: 100%;
 }
 .mypagedetail .reservedetail .tab_wrap table th {
     background-color: #f5f6f6;
@@ -1995,6 +1998,8 @@ main {
 .mypagedetail .reservedetail .box_4 .tit {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
 }
 .mypagedetail .reservedetail .box_4 button {
     font-size: 14px;
@@ -2218,6 +2223,41 @@ main {
 .mypagedetail .reservedetail .box_6 .change_insurance .notice ul li.red {
     color: #ed4949;
 }
+
+.mypagedetail .reservedetail .box_9 .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+.mypagedetail .reservedetail .box_9 button {
+    font-size: 14px;
+    border: 1px solid #d9d9d9;
+    background: none;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.mypagedetail .reservedetail .box_9 button:first-child {
+    margin-left: 0;
+}
+.mypagedetail .reservedetail .box_9 .guide {
+    border: 1px solid #d3dbd9;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+}
+.mypagedetail .reservedetail .box_9 .guide li {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    padding-left: 8px;
+    text-indent: -8px;
+}
+.mypagedetail .reservedetail .box_9 .guide li + li {
+    margin-top: 16px;
+}
 .mypagedetail .reservedetail .localtourswiper {
     margin-top: 40px;
     position: relative;
@@ -2364,7 +2404,7 @@ main {
     font-size: 18px;
     font-weight: 500;
     padding: 15px 45px;
-    border-bottom: 1px #e5e7eb solid;
+    word-break: keep-all;
 }
 .mypagedetail .reservedetail .service_banner .middle2 button {
     background: #009c75;
@@ -2378,6 +2418,7 @@ main {
 .mypagedetail .reservedetail .service_banner .bottom {
     display: flex;
     padding: 12px 0;
+    border-top: 1px #e5e7eb solid;
 }
 .mypagedetail .reservedetail .service_banner .bottom > div {
     flex: 1;
@@ -2402,4 +2443,167 @@ main {
 }
 .mypagedetail .reservedetail .service_banner .right {
     background: #ebecf1;
+}
+.mypagedetail .air_box .airline_tab {
+    position: relative;
+    margin-top: 20px;
+    border-bottom: 2px solid #eee;
+}
+.mypagedetail .air_box .airline_tab .tab_in {
+    display: flex;
+}
+.mypagedetail .air_box .airline_tab .tab_in a {
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 24px 0;
+}
+.mypagedetail .air_box .airline_tab .tab_in a.on {
+    color: #111;
+}
+.mypagedetail .air_box .airline_tab .bar {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #111;
+    left: 0;
+    transition: width 0.3s, left 0.3s, right 0.3s;
+}
+
+.mypagedetail .reservedetail .airschedule_st1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .airschedule_st1 > div {
+    border: none;
+}
+.mypagedetail .reservedetail .airschedule_st1 .tit {
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    margin-bottom: 6px;
+    gap: 0 10px;
+}
+.mypagedetail .reservedetail .airschedule_st1 .btn_box {
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .airschedule_st1 .btn_box .btn_type02 {
+    color: #555555;
+    background: #eee;
+    font-size: 14px;
+    height: 52px;
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .airschedule_st2 {
+    border: 1px #d3dbd9 solid;
+    padding: 24px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .air {
+    font-size: 15px;
+    color: #111;
+    font-weight: 700;
+}
+.mypagedetail .reservedetail .airschedule_st2 .air img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor {
+    margin-top: 24px;
+    display: flex;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor > div {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 11px 0;
+}
+
+.mypagedetail .reservedetail .airschedule_st2 .infor .left > div,
+.mypagedetail .reservedetail .airschedule_st2 .infor .right > div {
+    display: flex;
+    justify-content: space-between;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .right {
+    margin-left: 48px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .txt01 {
+    font-weight: 600;
+    font-size: 15px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .txt02 {
+    font-size: 14px;
+    text-align: right;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .txt02 button {
+    vertical-align: middle;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .bold {
+    font-weight: 600;
+    display: block;
+}
+.mypagedetail .reservedetail .infor_wrap .red {
+    color: #ed4949;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .infor_wrap .right.btn_box {
+    border: none;
+    padding: 0;
+    margin-top: 0;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .infor_wrap .right.btn_box button {
+    height: 52px;
+    font-size: 16px;
+}
+.mypagedetail .reservedetail .pay_notice2 {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.mypagedetail .reservedetail .pay_notice2 svg {
+    color: #ed4949;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .pay_notice {
+    margin-top: 30px;
+    border-width: 2px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .infor_box {
+    border: none;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right {
+    border: none;
+    padding: 0;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num {
+    margin-top: 10px;
+    font-size: 15px;
+    position: relative;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num span {
+    line-height: 25px;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num .txt01 {
+    margin-right: 20px;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num .txt02 {
+    font-weight: 300;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num .schedule_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
 }

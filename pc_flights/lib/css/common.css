@@ -66,6 +66,28 @@
     font-size: 14px;
 }
 
+.line_tab {
+    position: relative;
+}
+.line_tab .line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #009b75;
+    position: absolute;
+    z-index: 2;
+    bottom: -7px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.mypagedetail .line_tab .line {
+    bottom: 0;
+    width: 50%;
+    background: #000;
+    position: absolute;
+}
+
 /* 레이어팝업 */
 .popup_container {
     position: relative;
