@@ -723,6 +723,28 @@
   margin-top: 30px;
   padding: 32px 40px;
 }
+.payment_layout .coupon_wrap .miledetailarea .check {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px #d3d3d3 solid;
+  margin-bottom: 30px;
+}
+.payment_layout .coupon_wrap .miledetailarea .check p {
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 17px;
+  margin-left: 14px;
+}
+.payment_layout .coupon_wrap .miledetailarea .check button {
+  margin-left: auto;
+  background: #fff;
+  border: 1px #111 solid;
+  color: #111;
+  height: 38px;
+  font-weight: 600;
+  font-size: 15px;
+}
 .payment_layout .coupon_wrap .miledetailarea .txt1 {
   border-bottom: 1px #d3d3d3 solid;
   padding-bottom: 15px;

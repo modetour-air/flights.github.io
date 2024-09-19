@@ -759,6 +759,26 @@
   margin-top: 30px;
   padding: 20px;
 }
+.payment_layout .coupon_wrap .miledetailarea .check {
+  padding-bottom: 30px;
+  text-align: center;
+}
+.payment_layout .coupon_wrap .miledetailarea .check p {
+  line-height: 22px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 14px;
+  margin: 20px 0;
+}
+.payment_layout .coupon_wrap .miledetailarea .check button {
+  margin-left: auto;
+  background: #fff;
+  border: 1px #111 solid;
+  color: #111;
+  height: 38px;
+  font-weight: 600;
+  font-size: 15px;
+}
 .payment_layout .coupon_wrap .miledetailarea .txt1 {
   border-bottom: 1px #d3d3d3 solid;
   padding-bottom: 15px;
@@ -859,6 +879,9 @@
   background: #fff;
   height: 30px;
   width: 75px;
+}
+.ant-empty-img-simple-g {
+  stroke: #d9d9d9;
 }
 /* [e] : 마일리지창 */
 /* [s] : 결제정보 - 무통장 */

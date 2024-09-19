@@ -902,7 +902,7 @@
 /* [e] : 예약 2단계 - 예약자 정보 입력 */
 /* [s] : 예약 상세 페이지 */
 .mypagedetail {
-  padding: 0 20px;
+  padding: 0 20px 60px 20px;
 }
 .mypagedetail .reservedetail .sub_top {
   padding-top: 18px;
@@ -1215,6 +1215,9 @@
   background: none;
   height: 50px;
 }
+.mypagedetail .reservedetail .infor_box.b_3 button {
+  width: calc((100% - 15px) / 2);
+}
 .mypagedetail .reservedetail .infor_box .w100 {
   flex-basis: 100%;
 }
@@ -1475,7 +1478,20 @@
 .mypagedetail .reservedetail .hotel_item .txt03 svg#arrow {
   color: #111;
 }
-
+.mypagedetail .reservedetail .bottom_btn_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 11;
+  padding: 20px;
+  display: flex;
+  column-gap: 10px;
+}
+.mypagedetail .reservedetail .bottom_btn_box button {
+  flex: 1;
+}
 .mypagedetail .reservedetail .service_banner {
   margin-top: 20px;
 }
