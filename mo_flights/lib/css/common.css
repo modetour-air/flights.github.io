@@ -521,6 +521,7 @@ input[type="checkbox"] {
 }
 .select_box .select_option li span {
     font-size: 14px;
+    color: inherit;
 }
 .select_box .select_option li:hover {
     background: #e6f2ef;
@@ -1033,6 +1034,7 @@ input[type="checkbox"] {
 }
 .st01 .purple01 {
     background: #8100e2;
+    border-color: #8100e2 !important;
     color: #fff !important;
 }
 .st01 .red01 {
