@@ -1252,12 +1252,20 @@ input[type="checkbox"] {
 }
 
 .bt_nav .radial_menu .wrap .inner .m_side_menu .item_name .de {
-    transform: skewY(45deg) rotate(calc(0deg - 25.714285714285715deg - 90deg + 25.714285714285715deg - 360deg / 7 * 5));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item1 .item_name .de { transform: skewY(45deg) rotate(-372.857deg) }
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item2 .item_name .de { transform: skewY(45deg) rotate(-424.286deg); }
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item3 .item_name .de { transform: skewY(45deg) rotate(-475.714deg); }
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item4 .item_name .de { transform: skewY(45deg) rotate(-527.143deg); }
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item5 .item_name .de { transform: skewY(45deg) rotate(-218.571deg); }
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item6 .item_name .de { transform: skewY(45deg) rotate(-270deg); }
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item7 .item_name .de { transform: skewY(45deg) rotate(-321.429deg); }
+
 .bt_nav .radial_menu .wrap .inner .m_side_menu .item_name .de span {
     font-size: 12px;
     margin-top: 4px;

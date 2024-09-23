@@ -25,6 +25,13 @@ $(document).ready(function () {
         $sideMenu[0].offsetHeight;
         $sideMenu.css('transition', 'transform 0.1s ease-out');
       }
+      const $sideMenuItems = $('.m_side_menu .item');
+      $sideMenuItems.each(function(index, item) {
+        let newRotationValue = -372.857 - (index * 51.429) - dialCurrentRotation;
+        $(item).find('.de').css({
+          transform: `skewY(45deg) rotate(${newRotationValue}deg)`
+        });
+      });
     }
   }
   
@@ -62,16 +69,22 @@ $(document).ready(function () {
       cancelAnimationFrame(rafId);
     }
     
+    const centerBtnRect = $centerBtn[0].getBoundingClientRect();
+    const currentAngle = getAngle(e.touches[0].clientX, e.touches[0].clientY, centerBtnRect);
+    let deltaAngle = getShortestRotation(lastAngle, currentAngle);
+    dialCurrentRotation += deltaAngle;
+    
     rafId = requestAnimationFrame(function() {
-      const centerBtnRect = $centerBtn[0].getBoundingClientRect();
-      const currentAngle = getAngle(e.touches[0].clientX, e.touches[0].clientY, centerBtnRect);
-      
-      let deltaAngle = getShortestRotation(lastAngle, currentAngle);
-      dialCurrentRotation += deltaAngle;
-      
       applyRotation(dialCurrentRotation, true);
-      
       lastAngle = currentAngle;
+    });
+    
+    const $sideMenuItems = $('.m_side_menu .item1');
+    $sideMenuItems.each(function(index, item) {
+      let newRotationValue = -372.857 - (index * 51.429) - dialCurrentRotation;
+      $(item).find('.de').css({
+        transform: `skewY(45deg) rotate(${newRotationValue}deg)`
+      });
     });
   });
   
