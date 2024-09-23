@@ -64,4 +64,20 @@ $(document).ready(function () {
         $(this).siblings(".fade_view").stop().toggle();
         return false;
     });
+
+    //하단 M버튼
+    $(".center").click(function () {
+        $(".m_side_menu, .nav_bar .left, .nav_bar .right, .nav_bar .center, .radial_menu .dim").toggleClass("on");
+    });
+
+    var prevScrollTop = 0;
+    document.addEventListener("scroll", function () {
+        var nowScrollTop = $(window).scrollTop();
+        if (nowScrollTop > prevScrollTop) {
+            $(".bt_nav").addClass("st"); //스크롤 내렸을때
+        } else {
+            $(".bt_nav").removeClass("st"); //스크롤 올렸을때
+        }
+        prevScrollTop = nowScrollTop;
+    });
 });
