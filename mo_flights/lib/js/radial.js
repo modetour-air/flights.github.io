@@ -13,6 +13,8 @@ $(document).ready(function () {
   let lastAngle = 0;
   let isAnimating = false;
   
+  const BOLD_INDEX = 0; // 항상 bold 처리될 항목의 인덱스 (0은 초기 1시 방향)
+  
   const applyRotation = (rotation) => {
     $sideMenu.css('transform', `rotate(${rotation}deg)`);
     const $sideMenuItems = $('.m_side_menu .item');
@@ -22,6 +24,17 @@ $(document).ready(function () {
         transform: `skewY(45deg) rotate(${newRotationValue}deg)`
       });
     });
+  }
+  
+  const updateBoldText = () => {
+    const $sideMenuItems = $('.m_side_menu .item');
+    $sideMenuItems.find('span').css('font-weight', 'normal');
+    
+    // 1시 방향에 위치한 항목의 인덱스 계산
+    let boldIndex = Math.round(dialCurrentRotation / sliceSize) % dataRadialMenu.length;
+    boldIndex = (dataRadialMenu.length - boldIndex) % dataRadialMenu.length;
+    
+    $sideMenuItems.eq(boldIndex).find('span').css('font-weight', 'bold');
   }
   
   const getAngle = (x, y, rect) => {
@@ -49,6 +62,7 @@ $(document).ready(function () {
         requestAnimationFrame(animate);
       } else {
         isAnimating = false;
+        updateBoldText()
         updateSelectedItem();
       }
     };
@@ -97,4 +111,5 @@ $(document).ready(function () {
   });
   
   applyRotation(0);
+  updateBoldText();
 });
