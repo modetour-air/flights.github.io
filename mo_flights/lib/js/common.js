@@ -69,9 +69,8 @@ $(document).ready(function () {
     $(".center").click(function () {
         $(".m_side_menu, .nav_bar .left, .nav_bar .right, .nav_bar .center, .radial_menu .dim").toggleClass("on");
     });
-
     var prevScrollTop = 0;
-    document.addEventListener("scroll", function () {
+    $(window).scroll(function () {
         var nowScrollTop = $(window).scrollTop();
         if (nowScrollTop > prevScrollTop) {
             $(".bt_nav").addClass("st"); //스크롤 내렸을때
@@ -79,5 +78,17 @@ $(document).ready(function () {
             $(".bt_nav").removeClass("st"); //스크롤 올렸을때
         }
         prevScrollTop = nowScrollTop;
+
+        //top버튼
+        if (nowScrollTop < 500) {
+            $(".top_btn").hide();
+        } else {
+            $(".top_btn").show();
+        }
+    });
+
+    //top버튼
+    $(".top_btn").click(function () {
+        $("html, body").stop().animate({ scrollTop: 0 }, 800);
     });
 });

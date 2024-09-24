@@ -1322,6 +1322,11 @@ input[type="checkbox"] {
     bottom: 0;
     position: fixed;
 }
+.bt_nav .top_btn {
+    position: absolute;
+    bottom: 81px;
+    right: 9px;
+}
 
 @keyframes NavigationBar_downLeftRight__3Mg2u {
     0% {
