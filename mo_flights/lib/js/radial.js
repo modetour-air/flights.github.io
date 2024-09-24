@@ -2,7 +2,6 @@ $(document).ready(function () {
   let dialCurrentRotation = 0;
   const dataRadialMenu = ['','','','','','',''];
   const sliceSize = 360 / dataRadialMenu.length;
-  const offset = sliceSize / 2;
   const initialOffset = 372.857;
   
   const $radialMenu = $('.radial_menu');
@@ -12,8 +11,6 @@ $(document).ready(function () {
   let startAngle = 0;
   let lastAngle = 0;
   let isAnimating = false;
-  
-  const BOLD_INDEX = 0; // 항상 bold 처리될 항목의 인덱스 (0은 초기 1시 방향)
   
   const applyRotation = (rotation) => {
     $sideMenu.css('transform', `rotate(${rotation}deg)`);
