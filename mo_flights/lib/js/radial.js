@@ -2,37 +2,26 @@ $(document).ready(function () {
   let dialCurrentRotation = 0;
   const dataRadialMenu = ['','','','','','',''];
   const sliceSize = 360 / dataRadialMenu.length;
+  const offset = sliceSize / 2;
+  const initialOffset = 372.857;
   
   const $radialMenu = $('.radial_menu');
   const $sideMenu = $('.m_side_menu');
   const $centerBtn = $('.m_center');
   
-  let rafId = null;
-  let lastRotation = 0;
   let startAngle = 0;
   let lastAngle = 0;
+  let isAnimating = false;
   
-  $sideMenu.css('transition', 'transform 0.1s ease-out');
-  
-  const applyRotation = (rotation, immediate = false) => {
-    if (rotation !== lastRotation) {
-      if (immediate) {
-        $sideMenu.css('transition', 'none');
-      }
-      $sideMenu.css('transform', `rotate(${rotation}deg)`);
-      lastRotation = rotation;
-      if (immediate) {
-        $sideMenu[0].offsetHeight;
-        $sideMenu.css('transition', 'transform 0.1s ease-out');
-      }
-      const $sideMenuItems = $('.m_side_menu .item');
-      $sideMenuItems.each(function(index, item) {
-        let newRotationValue = -372.857 - (index * 51.429) - dialCurrentRotation;
-        $(item).find('.de').css({
-          transform: `skewY(45deg) rotate(${newRotationValue}deg)`
-        });
+  const applyRotation = (rotation) => {
+    $sideMenu.css('transform', `rotate(${rotation}deg)`);
+    const $sideMenuItems = $('.m_side_menu .item');
+    $sideMenuItems.each(function(index, item) {
+      let newRotationValue = -initialOffset - (index * sliceSize) - rotation;
+      $(item).find('.de').css({
+        transform: `skewY(45deg) rotate(${newRotationValue}deg)`
       });
-    }
+    });
   }
   
   const getAngle = (x, y, rect) => {
@@ -43,68 +32,69 @@ $(document).ready(function () {
     return ((angle % 360) + 360) % 360;
   }
   
-  const getShortestRotation = (from, to) => {
-    const diff = normalizeAngle(to - from);
-    if (diff > 180) {
-      return diff - 360;
-    }
-    return diff;
+  const animateRotation = (start, end, duration) => {
+    const startTime = performance.now();
+    isAnimating = true;
+    
+    const animate = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const easedProgress = 0.5 - Math.cos(progress * Math.PI) / 2;
+      
+      const currentRotation = start + (end - start) * easedProgress;
+      applyRotation(currentRotation);
+      dialCurrentRotation = currentRotation;
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        isAnimating = false;
+        updateSelectedItem();
+      }
+    };
+    
+    requestAnimationFrame(animate);
   }
   
-  $radialMenu.on('touchstart', function (e) {
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-    }
-    const centerBtnRect = $centerBtn[0].getBoundingClientRect();
-    startAngle = getAngle(e.touches[0].clientX, e.touches[0].clientY, centerBtnRect);
-    lastAngle = startAngle;
-    
-    applyRotation(dialCurrentRotation, true);
-  });
-  
-  $radialMenu.on('touchmove', function (e) {
-    e.preventDefault();
-    
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-    }
-    
-    const centerBtnRect = $centerBtn[0].getBoundingClientRect();
-    const currentAngle = getAngle(e.touches[0].clientX, e.touches[0].clientY, centerBtnRect);
-    let deltaAngle = getShortestRotation(lastAngle, currentAngle);
-    dialCurrentRotation += deltaAngle;
-    
-    rafId = requestAnimationFrame(function() {
-      applyRotation(dialCurrentRotation, true);
-      lastAngle = currentAngle;
-    });
-    
-    const $sideMenuItems = $('.m_side_menu .item1');
-    $sideMenuItems.each(function(index, item) {
-      let newRotationValue = -372.857 - (index * 51.429) - dialCurrentRotation;
-      $(item).find('.de').css({
-        transform: `skewY(45deg) rotate(${newRotationValue}deg)`
-      });
-    });
-  });
-  
-  $radialMenu.on('touchend', function () {
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-    }
-    
-    dialCurrentRotation = Math.round(dialCurrentRotation / sliceSize) * sliceSize;
-    
-    let selectedIndex = Math.round(normalizeAngle(dialCurrentRotation) / sliceSize) % dataRadialMenu.length;
+  const updateSelectedItem = () => {
+    let selectedIndex = Math.round(normalizeAngle(-dialCurrentRotation) / sliceSize) % dataRadialMenu.length;
     selectedIndex = (selectedIndex + dataRadialMenu.length) % dataRadialMenu.length;
     
     const selectedItem = dataRadialMenu[selectedIndex];
     
     console.log('Selected index:', selectedIndex);
     console.log('Selected item:', selectedItem);
-    
-    applyRotation(dialCurrentRotation);
+  }
+  
+  $radialMenu.on('touchstart', function (e) {
+    if (isAnimating) return;
+    const centerBtnRect = $centerBtn[0].getBoundingClientRect();
+    startAngle = getAngle(e.touches[0].clientX, e.touches[0].clientY, centerBtnRect);
+    lastAngle = startAngle;
   });
   
-  applyRotation(dialCurrentRotation, true);
+  $radialMenu.on('touchmove', function (e) {
+    if (isAnimating) return;
+    e.preventDefault();
+    
+    const centerBtnRect = $centerBtn[0].getBoundingClientRect();
+    const currentAngle = getAngle(e.touches[0].clientX, e.touches[0].clientY, centerBtnRect);
+    
+    let deltaAngle = currentAngle - lastAngle;
+    if (deltaAngle > 180) deltaAngle -= 360;
+    if (deltaAngle < -180) deltaAngle += 360;
+    
+    dialCurrentRotation += deltaAngle;
+    applyRotation(dialCurrentRotation);
+    
+    lastAngle = currentAngle;
+  });
+  
+  $radialMenu.on('touchend', function () {
+    if (isAnimating) return;
+    const targetRotation = Math.round(dialCurrentRotation / sliceSize) * sliceSize;
+    animateRotation(dialCurrentRotation, targetRotation, 200);
+  });
+  
+  applyRotation(0);
 });
