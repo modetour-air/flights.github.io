@@ -4,12 +4,12 @@
     padding: 0 20px;
 }
 
-/* 버튼 */
+/* 버튼 2024-10-07 수정 */
 button {
     border: none;
     background: none;
 }
-.btn_box button[class^="btn_type"] {
+.btn_box [class^="btn_type"] {
     display: inline-block;
     width: 100%;
     border-radius: 5px;
@@ -18,23 +18,24 @@ button {
     font-weight: 600;
     transition: 0.3s;
     cursor: pointer;
+    text-align: center;
 }
-.btn_box button[class^="btn_type"].btn_type03 {
+.btn_box [class^="btn_type"].btn_type03 {
     background: #e6e6e6;
     border: 1px #bababa solid;
     line-height: 35px;
     color: #a8a8a8;
 }
-.btn_box button[class^="btn_type"].btn_type01 {
+.btn_box [class^="btn_type"].btn_type01 {
     background: #009c75;
     color: #fff;
 }
-.btn_box button[class^="btn_type"].btn_type02 {
+.btn_box [class^="btn_type"].btn_type02 {
     background: #fff;
     border: 1px #111 solid;
     color: #111;
 }
-.btn_box button[class^="btn_type"].btn_type04 {
+.btn_box [class^="btn_type"].btn_type04 {
     background: #fff;
     height: 56px;
     border: 1px #d3dbd9 solid;
@@ -46,7 +47,7 @@ button {
     justify-content: space-between;
     align-items: center;
 }
-.btn_box button[class^="btn_type"].btn_type04::after {
+.btn_box [class^="btn_type"].btn_type04::after {
     content: "";
     width: 20px;
     height: 20px;
@@ -59,20 +60,31 @@ button {
     font-size: 14px;
 }
 
-.btn_box button[class^="btn_type"].btn_type05 {
+.btn_box [class^="btn_type"].btn_type05 {
     border: 1px solid #009c75;
     color: #009c75;
 }
-.btn_box button[class^="btn_type"].btn_type06 {
+.btn_box [class^="btn_type"].btn_type06 {
     background: #111;
     border: 1px #111 solid;
     line-height: 35px;
     color: #fff;
 }
-.btn_box button[class^="btn_type"].btn_type07 {
+.btn_box [class^="btn_type"].btn_type07 {
     border: none;
     background: #eee;
     color: #555;
+}
+.btn_box a[class^="btn_type"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_box [class^="btn_type"] span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
 }
 /* 레이어팝업 */
 .popup_container {
@@ -1174,7 +1186,26 @@ input[type="checkbox"] {
     top: -24px;
     animation: NavigationBar_downCenter__P9Ptw 0.6s;
 }
-
+.bt_nav .nav_bar .menu_btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px 0;
+}
+.bt_nav .nav_bar .t_blind {
+    color: #fff !important;
+}
+.bt_nav .nav_bar .menu_btn > svg {
+    margin: 0 auto;
+}
+.bt_nav .nav_bar .menu_btn span {
+    width: 100%;
+    display: inline-block;
+    font-size: 11px;
+    color: #111;
+}
 .bt_nav .radial_menu {
     position: absolute;
     width: 100%;

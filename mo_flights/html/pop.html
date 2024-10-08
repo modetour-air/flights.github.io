@@ -134,6 +134,16 @@
                         <li>4. 결제팝업 - 유의사항(이중팝업) ☞ <a href="#mypage_noticepop">유의사항 팝업(이중팝업)</a></li>
                     </ul>
                 </div>
+                <div style="width: 100%">
+                    <div class="btn_tit">M다이얼</div>
+                    <ul class="pop_list">
+                        <li>1. 검색기록 <a href="#search_history">있을 때</a> <a href="#search_history_not">없을 때</a></li>
+                        <li>2. 최근 본 상품 <a href="#recently_viewed_items">있을 때</a> <a href="#recently_viewed_items_not">없을 때</a></li>
+                        <li>3. 찜한 상품 <a href="#wishlist">있을 때</a> <a href="#wishlist_not">없을 때</a></li>
+                        <li>4. 예약내역 확인 및 결제 <a href="#reservation_details_login">로그인 안내</a> <a href="#reservation_details">있을 때</a> <a href="#reservation_details_not">없을 때</a></li>
+                        <li>5. 마이페이지 <a href="#mypage">로그인 전, 후</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -1404,29 +1414,29 @@
                                             <div class="swiper-slide">
                                                 <div class="wrap">
                                                     <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
-                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
                                                     <button type="button" class="delete">삭제</button>
                                                 </div>
                                                 <div class="wrap">
                                                     <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
-                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
                                                     <button type="button" class="delete">삭제</button>
                                                 </div>
                                                 <div class="wrap">
                                                     <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
-                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
                                                     <button type="button" class="delete">삭제</button>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="wrap">
                                                     <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
-                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
                                                     <button type="button" class="delete">삭제</button>
                                                 </div>
                                                 <div class="wrap">
                                                     <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
-                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13 (3일)</span><span class="person">총 1인</span></div>
+                                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
                                                     <button type="button" class="delete">삭제</button>
                                                 </div>
                                             </div>
@@ -5652,6 +5662,589 @@
                     </div>
                 </div>
                 <!-- [e] : 여권정보입력 팝업 -->
+
+                <!-------------------------------------------------------------- [s] 다이얼 팝업 -------------------------------------------------------------->
+                <!-- [s] : 검색기록 있을 때 팝업 -->
+                <div class="pop search_history" id="search_history">
+                    <div class="pop_in">
+                        <div class="pop_wrap">
+                            <div class="txt">
+                                <div class="item">
+                                    <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                    <button type="button" class="delete">삭제</button>
+                                </div>
+                                <div class="item">
+                                    <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                    <button type="button" class="delete">삭제</button>
+                                </div>
+                                <div class="item">
+                                    <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                    <button type="button" class="delete">삭제</button>
+                                </div>
+                                <div class="item">
+                                    <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                    <button type="button" class="delete">삭제</button>
+                                </div>
+                                <div class="item">
+                                    <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                    <button type="button" class="delete">삭제</button>
+                                </div>
+                                <div class="item">
+                                    <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                    <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                    <button type="button" class="delete">삭제</button>
+                                </div>
+                            </div>
+                            <div class="btn_box">
+                                <a href="#search_history_all" class="btn_type01"><span>전체보기</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 검색기록 있을 때 팝업 -->
+                <!-- [s] : 검색기록 있을 때 전체보기 팝업 -->
+                <div class="pop search_history_all" id="search_history_all">
+                    <div class="pop_in">
+                        <div class="close">
+                            <a href=""><img alt="" src="https://m.modetour.com/icons/icon_x_14_black.svg" /></a>
+                        </div>
+                        <div class="tit">최근검색</div>
+                        <div class="pop_wrap">
+                            <div class="txt">
+                                <p>최대 50개까지 저장됩니다.</p>
+                                <button type="button" class="all_reset">전체삭제</button>
+                            </div>
+                            <div class="tab_area">
+                                <div class="btn_group">
+                                    <div class="btn_wrap">
+                                        <button type="button" class="btn on"><span>전체</span></button>
+                                        <button type="button" class="btn"><span>다른</span></button>
+                                        <button type="button" class="btn"><span>일본</span></button>
+                                        <button type="button" class="btn"><span>말레이시아</span></button>
+                                        <button type="button" class="btn"><span>싱가포르</span></button>
+                                        <button type="button" class="btn"><span>베트남</span></button>
+                                        <button type="button" class="btn"><span>일본</span></button>
+                                        <button type="button" class="btn"><span>말레이시아</span></button>
+                                        <button type="button" class="btn"><span>싱가포르</span></button>
+                                        <button type="button" class="btn"><span>베트남</span></button>
+                                    </div>
+                                </div>
+                                <div class="con_group">
+                                    <div class="con on">
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="con">
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cont"><span class="destination">[항공] 푸켓</span><span class="day">오늘</span></div>
+                                            <div class="cont"><span class="date">2024.08.10 ~ 2024.08.13</span><span class="person">총 1인</span></div>
+                                            <button type="button" class="delete">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 검색기록 있을 때 전체보기 팝업 -->
+                <!-- [s] : 검색기록 없을 때 팝업 -->
+                <div class="pop search_history_not" id="search_history_not">
+                    <div class="pop_in">
+                        <div class="pop_wrap">
+                            <div class="tit">
+                                검색 기록이 남아 있지 않습니다.<br />
+                                🛬어떤 여행을 검색해 보시겠어요?
+                            </div>
+                            <div class="link_wrap">
+                                <a href="#"><span>해외여행 알아보기</span></a>
+                                <a href="#"><span>국내여행 알아보기</span></a>
+                                <a href="#"><span>항공 알아보기</span></a>
+                                <a href="#"><span>호텔 알아보기</span></a>
+                                <a href="#"><span>기획전 알아보기</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 검색기록 없을 때 팝업 -->
+                <!-- [s] : 최근본 상품 있을 때 팝업 -->
+                <div class="pop recently_viewed_items" id="recently_viewed_items">
+                    <div class="pop_in">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="box">
+                                        <a href="#recently_viewed_items_details">
+                                            <div class="recently_viewed_layout">
+                                                <div class="top">
+                                                    <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                    <div class="right">
+                                                        <div class="right_top">
+                                                            <span class="txt1">[호텔]</span>
+                                                            <span class="txt2">47일전</span>
+                                                        </div>
+                                                        <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="txt1">1박 평균요금</span>
+                                                    <span class="txt2">289,900<small>원</small></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="box">
+                                        <a href="#recently_viewed_items_details">
+                                            <div class="recently_viewed_layout">
+                                                <div class="top">
+                                                    <div class="img"><img src="https://img.modetour.com/eagle/photoimg/54741/Bfile/636120613537059901.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                    <div class="right">
+                                                        <div class="right_top">
+                                                            <span class="txt1">[해외여행]하노이</span>
+                                                            <span class="txt2">4일전</span>
+                                                        </div>
+                                                        <div class="right_bottom">[에어로케이♥30석한정 스트릿카 포함]하노이+하롱베이+옌뜨 3박5일</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="txt1">출발일 2025.03.01</span>
+                                                    <span class="txt2">289,900<small>원</small></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="box">
+                                        <a href="#recently_viewed_items_details">
+                                            <div class="recently_viewed_layout">
+                                                <div class="top">
+                                                    <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                    <div class="right">
+                                                        <div class="right_top">
+                                                            <span class="txt1">[호텔]</span>
+                                                            <span class="txt2">47일전</span>
+                                                        </div>
+                                                        <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="txt1">1박 평균요금</span>
+                                                    <span class="txt2">289,900<small>원</small></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- [e] : 최근본 상품 있을 때  팝업 -->
+                <!-- [s] : 최근본 상품 없을 때 팝업1 -->
+                <div class="pop recently_viewed_items_not" id="recently_viewed_items_not">
+                    <div class="pop_in">
+                        <a href="#recently_viewed_items_details">
+                            <div class="not"><span>최근 본 상품이 없습니다.</span></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- [e] : 최근본 상품 없을 때 팝업1 -->
+                <!-- [s] : 최근본 상품 없을 때 팝업2 -->
+                <div class="pop recently_viewed_items_details" id="recently_viewed_items_details">
+                    <div class="pop_in">
+                        <div class="close">
+                            <a href=""><img alt="" src="https://m.modetour.com/icons/icon_x_14_black.svg" /></a>
+                        </div>
+                        <div class="tit">최근 본 상품</div>
+                        <div class="pop_wrap">
+                            <div class="txt">
+                                <p>최대 50개까지 저장됩니다.</p>
+                            </div>
+                            <!-- [s] : 최근 검색한 내용 없을 때 -->
+                            <div class="not">
+                                <div class="txt2">
+                                    <div class="in">
+                                        <img src="https://m.modetour.com/icons/icon_alert_30.png" alt="" />
+                                        <p>최근 검색한 내용이 없습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="link_wrap">
+                                    <a href="#"><span>해외여행 알아보기</span></a>
+                                    <a href="#"><span>국내여행 알아보기</span></a>
+                                    <a href="#"><span>항공 알아보기</span></a>
+                                    <a href="#"><span>호텔 알아보기</span></a>
+                                    <a href="#"><span>기획전 알아보기</span></a>
+                                </div>
+                            </div>
+                            <!-- [e] : 최근 검색한 내용 없을 때 -->
+                            <!-- [s] : 최근 검색한 내용 있을 때 -->
+                            <div class="list_wrap">
+                                <ul>
+                                    <li class="list">
+                                        <div class="tit">
+                                            <span class="day">20224.10.04</span>
+                                            <button type="button" class="all_reset">전체삭제</button>
+                                        </div>
+                                        <ul>
+                                            <li class="items">
+                                                <div class="item">
+                                                    <div class="recently_viewed_layout">
+                                                        <div class="top">
+                                                            <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                            <div class="right">
+                                                                <div>
+                                                                    <div class="right_top">
+                                                                        <span class="txt1">[호텔]</span>
+                                                                        <span class="reset_btn"><img src="https://m.modetour.com/icons/icon_x_14.svg" alt="삭제" /></span>
+                                                                    </div>
+                                                                    <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                                </div>
+                                                                <div class="bottom">
+                                                                    <span class="txt1">출발일 2024.12.23</span>
+                                                                    <span class="txt2">289,900<small>원</small></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="items">
+                                                <div class="item">
+                                                    <div class="recently_viewed_layout">
+                                                        <div class="top">
+                                                            <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                            <div class="right">
+                                                                <div>
+                                                                    <div class="right_top">
+                                                                        <span class="txt1">[호텔]</span>
+                                                                        <span class="reset_btn"><img src="https://m.modetour.com/icons/icon_x_14.svg" alt="삭제" /></span>
+                                                                    </div>
+                                                                    <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                                </div>
+                                                                <div class="bottom">
+                                                                    <span class="txt1">출발일 2024.12.23</span>
+                                                                    <span class="txt2">289,900<small>원</small></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list">
+                                        <div class="tit">
+                                            <span class="day">20224.10.04</span>
+                                            <button type="button" class="all_reset">전체삭제</button>
+                                        </div>
+                                        <ul>
+                                            <li class="items">
+                                                <div class="item">
+                                                    <div class="recently_viewed_layout">
+                                                        <div class="top">
+                                                            <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                            <div class="right">
+                                                                <div>
+                                                                    <div class="right_top">
+                                                                        <span class="txt1">[호텔]</span>
+                                                                        <span class="reset_btn"><img src="https://m.modetour.com/icons/icon_x_14.svg" alt="삭제" /></span>
+                                                                    </div>
+                                                                    <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                                </div>
+                                                                <div class="bottom">
+                                                                    <span class="txt1">출발일 2024.12.23</span>
+                                                                    <span class="txt2">289,900<small>원</small></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list">
+                                        <div class="tit">
+                                            <span class="day">20224.10.04</span>
+                                            <button type="button" class="all_reset">전체삭제</button>
+                                        </div>
+                                        <ul>
+                                            <li class="items">
+                                                <div class="item">
+                                                    <div class="recently_viewed_layout">
+                                                        <div class="top">
+                                                            <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                            <div class="right">
+                                                                <div>
+                                                                    <div class="right_top">
+                                                                        <span class="txt1">[호텔]</span>
+                                                                        <span class="reset_btn"><img src="https://m.modetour.com/icons/icon_x_14.svg" alt="삭제" /></span>
+                                                                    </div>
+                                                                    <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                                </div>
+                                                                <div class="bottom">
+                                                                    <span class="txt1">출발일 2024.12.23</span>
+                                                                    <span class="txt2">289,900<small>원</small></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list">
+                                        <div class="tit">
+                                            <span class="day">2024.09.30</span>
+                                            <button type="button" class="all_reset">전체삭제</button>
+                                        </div>
+                                        <ul>
+                                            <li class="items">
+                                                <div class="item">
+                                                    <div class="recently_viewed_layout">
+                                                        <div class="top">
+                                                            <div class="img"><img src="https://i.travelapi.com/lodging/6000000/5260000/5250900/5250850/0aa1c8a2_b.jpg" alt="" /></div>
+                                                            <div class="right">
+                                                                <div>
+                                                                    <div class="right_top">
+                                                                        <span class="txt1">[호텔]</span>
+                                                                        <span class="reset_btn"><img src="https://m.modetour.com/icons/icon_x_14.svg" alt="삭제" /></span>
+                                                                    </div>
+                                                                    <div class="right_bottom">하버 그랜드 홍콩</div>
+                                                                </div>
+                                                                <div class="bottom">
+                                                                    <span class="txt1">1박 평균요금</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- [e] : 최근 검색한 내용 있을 때 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 최근본 상품 없을 때 팝업2 -->
+
+                <!-- [s] : 찜한 상품 있을 때 -->
+                <div class="pop wishlist" id="wishlist">
+                    <div class="pop_in">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="link"><span>💗찜한 상품 비교하러 가기</span></a>
+                                    <div class="box">
+                                        <a href="#">
+                                            <div class="recently_viewed_layout">
+                                                <div class="top">
+                                                    <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                    <div class="right">
+                                                        <div class="right_top">
+                                                            <span class="txt1">[호텔]</span>
+                                                        </div>
+                                                        <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="txt1">출발일 2024-10-08</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="link"><span>💗찜한 상품 비교하러 가기</span></a>
+                                    <div class="box">
+                                        <a href="#">
+                                            <div class="recently_viewed_layout">
+                                                <div class="top">
+                                                    <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                    <div class="right">
+                                                        <div class="right_top">
+                                                            <span class="txt1">[호텔]</span>
+                                                        </div>
+                                                        <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="txt1">출발일 2024-10-08</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="link"><span>💗찜한 상품 비교하러 가기</span></a>
+                                    <div class="box">
+                                        <a href="#">
+                                            <div class="recently_viewed_layout">
+                                                <div class="top">
+                                                    <div class="img"><img src="https://img.modetour.com/eagle/photoimg/53670/Bfile/636900601662933426.jpg?resize=y&resize_w=114&resize_h=114&w_h_fill=y" alt="" /></div>
+                                                    <div class="right">
+                                                        <div class="right_top">
+                                                            <span class="txt1">[호텔]</span>
+                                                        </div>
+                                                        <div class="right_bottom">[인기있다낭/호텔무료UP] 다낭/호이안/바나힐 7일 (4성->5성호텔로 무료UP)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="txt1">출발일 2024-10-08</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- [e] : 찜한 상품 있을 때 -->
+
+                <!-- [s] : 찜한 상품 없을 때 -->
+                <div class="pop wishlist_not basic_pop" id="wishlist_not">
+                    <div class="pop_in">
+                        <p>로그인 하시면 M다이얼에서<br />찜한 상품을 바로 확인 할 수 있어요.</p>
+                        <div class="btn_box">
+                            <button type="button" class="btn_type01">로그인 하기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 찜한 상품 없을 때 -->
+
+                <!-- [s] : 예약내역 확인 및 결제 로그인 -->
+                <div class="pop reservation_details_login basic_pop" id="reservation_details_login">
+                    <div class="pop_in">
+                        <p>로그인 하시면 M다이얼에서<br />예약내역을 바로 확인 할 수 있어요.</p>
+                        <div class="btn_box">
+                            <button type="button" class="btn_type01">로그인 하기</button>
+                        </div>
+                        <div class="btn_box">
+                            <button type="button" class="btn_type02">비회원 예약조회</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 예약내역 확인 및 결제 로그인 -->
+
+                <!-- [s] : 예약내역 있는 때 -->
+                <div class="pop reservation_details" id="reservation_details">
+                    <div class="pop_in">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="box">
+                                        <a href="#">
+                                            <div class="txt1">해외항공</div>
+                                            <div class="txt2">ICN - TPE</div>
+                                            <div class="txt3">인천 - 타이페이 : 2025-01-15 16:15</div>
+                                            <div class="txt4">· 성인 1인</div>
+                                            <div class="txt5">585,600<small>원 ~</small></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="box">
+                                        <a href="#">
+                                            <div class="txt1">국내항공</div>
+                                            <div class="txt2">CJU - GMP</div>
+                                            <div class="txt3">김포 - 제주 : 2025-01-20 06:05</div>
+                                            <div class="txt4">· 성인 1인</div>
+                                            <div class="txt5">-</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-- [e] : 예약내역 있는 때 -->
+
+                <!-- [s] : 예약내역 없을 때 -->
+                <div class="pop reservation_details_not basic_pop" id="reservation_details_not">
+                    <div class="pop_in">
+                        <p>예약내역이 없습니다.</p>
+                        <div class="btn_box">
+                            <button type="button" class="btn_type01">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 예약내역 없을 때 -->
+
+                <!-- [s] : 마이페이지 -->
+                <div class="pop mypage basic_pop" id="mypage">
+                    <div class="pop_in">
+                        <p>내가 이용한 모두투어의 정보가<br />모두 여기에~😮</p>
+                        <div class="btn_box"><button type="button" class="btn_type01">로그인 하기</button></div>
+                        <!-- 로그인 전 -->
+                        <div class="btn_box"><a href="#" class="btn_type01">바로 가기</a></div>
+                        <!-- 로그인 후 -->
+                    </div>
+                </div>
+                <!-- [e] : 마이페이지 -->
+                <!-------------------------------------------------------------- [e] // 다이얼 팝업 -------------------------------------------------------------->
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -5758,6 +6351,19 @@
                     return false;
                 });
 
+                //다이얼 검색기록 전체보기 팝업
+                $(".search_history a").click(function () {
+                    $(".dim").addClass("active");
+                    $($.attr(this, "href")).show();
+                    return false;
+                });
+                //최근 본 상품 內 팝업
+                $(".recently_viewed_items a, .recently_viewed_items_not a").click(function () {
+                    $(".dim").addClass("active");
+                    $($.attr(this, "href")).show();
+                    return false;
+                });
+
                 //마일리지팝업 tab 클릭
                 $(".mileagepop .tab li a").click(function () {
                     var t = $(this);
@@ -5827,6 +6433,50 @@
                     } else if ($("#rscancle_payback .chk_wrap .radiobox input:checked").val() == "0") {
                         $(".rscancle_pop .hide_con").hide();
                     }
+                });
+
+                //다이얼 - 최근 본 상품 슬라이드
+                var swiper1 = new Swiper(".recently_viewed_items .swiper", {
+                    slidesPerView: "auto",
+                    spaceBetween: 100,
+                    centeredSlides: true,
+                    navigation: {
+                        nextEl: ".recently_viewed_items .swiper-button-next",
+                        prevEl: ".recently_viewed_items .swiper-button-prev",
+                    },
+                    observer: true,
+                    observeParents: true,
+                    loop: this.SwioperLength > 1,
+                    watchOverflow: true,
+                });
+
+                //다이얼 - 찜한 상품 슬라이드
+                var swiper2 = new Swiper(".wishlist .swiper", {
+                    slidesPerView: "auto",
+                    spaceBetween: 100,
+                    centeredSlides: true,
+                    navigation: {
+                        nextEl: ".wishlist .swiper-button-next",
+                        prevEl: ".wishlist .swiper-button-prev",
+                    },
+                    observer: true,
+                    observeParents: true,
+                    loop: this.SwioperLength > 1,
+                    watchOverflow: true,
+                });
+                //다이얼 - 예약내역 슬라이드
+                var swiper3 = new Swiper(".reservation_details .swiper", {
+                    slidesPerView: "auto",
+                    spaceBetween: 100,
+                    centeredSlides: true,
+                    navigation: {
+                        nextEl: ".reservation_details .swiper-button-next",
+                        prevEl: ".reservation_details .swiper-button-prev",
+                    },
+                    observer: true,
+                    observeParents: true,
+                    loop: this.SwioperLength > 1,
+                    watchOverflow: true,
                 });
             });
         </script>

@@ -7,14 +7,15 @@
     src: url("../../fonts/ModetourB.75c8de80.woff") format("woff"), url("../../fonts/ModetourB.75c8de80.woff") format("truetype");
 }
 
-/* 버튼 */
-.btn_box button[class^="btn_type"] {
+/* 버튼 2024-10-07 수정*/
+.btn_box [class^="btn_type"] {
     display: inline-block;
     border-radius: 5px;
     font-size: 15px;
     font-weight: 500;
     transition: 0.3s;
     cursor: pointer;
+    text-align: center;
 }
 .btn_box .btn_100 {
     width: 100% !important;
@@ -88,6 +89,17 @@
     position: absolute;
 }
 
+.btn_box a[class^="btn_type"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_box [class^="btn_type"] span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
 /* 레이어팝업 */
 .popup_container {
     position: relative;

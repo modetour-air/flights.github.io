@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.45);
     display: none;
 }
 .dim.active {
@@ -3993,3 +3993,566 @@
     color: #111;
 }
 /* [e] : 1:1상담 팝업 */
+
+/* [s] 다이얼 팝업 */
+.basic_pop {
+    box-shadow: 0px 0px 6px #111;
+    border-radius: 10px;
+}
+.basic_pop .pop_in {
+    width: 295px;
+    max-height: 387px;
+    padding: 30px 20px 20px 20px;
+    border-radius: 10px;
+}
+.basic_pop .pop_in p {
+    text-align: center;
+    color: #111;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.search_history .pop_in {
+    width: 295px;
+    height: calc(100vh - 387px);
+    max-height: 387px;
+    padding: 30px 20px;
+}
+.search_history .pop_in .pop_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.search_history .pop_in .pop_wrap .txt {
+    overflow: auto;
+}
+[id^="search_history"] .item {
+    background: #f5f6f6;
+    height: 70px;
+    padding: 16px 42px 16px 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 14px;
+}
+[id^="search_history"] .item .cont {
+    display: flex;
+    justify-content: space-between;
+}
+[id^="search_history"] .item .destination {
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+}
+[id^="search_history"] .item .day {
+    color: #aaa;
+    font-size: 12px;
+}
+[id^="search_history"] .item .date {
+    color: #888;
+    font-size: 12px;
+}
+[id^="search_history"] .item .person {
+    color: #555;
+    font-size: 13px;
+    position: relative;
+}
+[id^="search_history"] .item .delete {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 14px;
+    height: 14px;
+    background: url("../images/ico_delete3.svg") no-repeat center 0 / cover;
+    font-size: 0;
+    color: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.search_history_all {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+.search_history_all .pop_in {
+    height: 100vh;
+    position: relative;
+}
+.search_history_all .pop_in .close {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+.search_history_all .pop_in .close img {
+    width: 26px;
+    height: 26px;
+}
+.search_history_all .tit {
+    padding: 9px 20px 37px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #111;
+    margin: 0;
+}
+.search_history_all .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.search_history_all .txt p {
+    font-size: 15px;
+    color: #aaa;
+}
+.search_history_all .all_reset {
+    font-size: 12px;
+    line-height: 16px;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+.search_history_all .pop_wrap {
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+}
+.search_history_all .tab_area {
+    margin-top: 24px;
+}
+.search_history_all .tab_area .btn_group {
+    width: 100%;
+    overflow-x: auto;
+    z-index: 999;
+}
+.search_history_all .tab_area .btn_group .btn_wrap {
+    display: flex;
+    height: 100%;
+}
+.search_history_all .tab_area .btn_group .btn_wrap .btn {
+    font-size: 13px;
+    height: 36px;
+    color: #fff;
+    font-weight: bold;
+    flex: 1;
+    padding: 0 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 1px #d3dbd9 solid;
+    color: #111;
+}
+.search_history_all .tab_area .btn_group .btn_wrap .btn + .btn {
+    margin-left: 6px;
+}
+.search_history_all .tab_area .btn_group .btn_wrap .btn.on {
+    background: #009c75;
+    color: #fff;
+    border-color: #009c75;
+}
+.search_history_all .tab_area .btn_group .btn_wrap .btn span {
+    display: block;
+    width: max-content;
+    font-size: 12px;
+    font-weight: normal;
+    color: inherit;
+}
+.search_history_all .tab_area .con_group {
+    padding: 16px 20px;
+}
+
+.search_history_not .pop_in {
+    width: 295px;
+    height: calc(100vh - 387px);
+    max-height: 387px;
+    padding: 30px 20px;
+}
+
+.search_history_not .pop_in .pop_wrap .tit {
+    color: #111;
+    line-height: 21px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+}
+.search_history_not .pop_in .pop_wrap .link_wrap a {
+    height: 44px;
+    background: #f5f6f6;
+    border-radius: 5px;
+    padding: 0 24px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_history_not .pop_in .pop_wrap .link_wrap a::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("https://m.modetour.com/icons/radialMenu/searchHistory/icon_arrow_dark_18.svg") center / cover;
+}
+.recently_viewed_items {
+    width: 100%;
+}
+.recently_viewed_items .pop_in {
+    background: none;
+    position: relative;
+}
+.recently_viewed_items .swiper-slide .box {
+    width: 73.82%;
+    height: 136px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 0px 6px #111;
+    border-radius: 10px;
+}
+.recently_viewed_items .swiper-slide .box > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+}
+.recently_viewed_layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recently_viewed_layout .top {
+    display: flex;
+}
+.recently_viewed_layout .top .img {
+    width: 57px;
+    height: 57px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.recently_viewed_layout .top .img img {
+    width: 100%;
+    height: 100%;
+}
+.recently_viewed_layout .top .right {
+    margin-left: 16px;
+    flex: 1;
+}
+.recently_viewed_layout .top .right .right_top {
+    display: flex;
+    justify-content: space-between;
+}
+.recently_viewed_layout .top .right .right_top .txt1 {
+    color: #009c75;
+    font-size: 13px;
+    font-weight: 600;
+}
+.recently_viewed_layout .top .right .right_top .txt2 {
+    color: #aaa;
+    font-size: 12px;
+}
+.recently_viewed_layout .top .right .right_bottom {
+    font-size: 14px;
+    color: #111;
+    line-height: 17px;
+    font-weight: 600;
+    margin-top: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.recently_viewed_layout .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recently_viewed_layout .bottom .txt1 {
+    font-size: 12px;
+    color: #888;
+}
+.recently_viewed_layout .bottom .txt2 {
+    font-size: 16px;
+    color: #111;
+    font-weight: 600;
+}
+.recently_viewed_layout .bottom .txt2 small {
+    font-size: 14px;
+    font-weight: normal;
+}
+.recently_viewed_items .swiper-button-prev,
+.wishlist .swiper-button-prev,
+.reservation_details .swiper-button-prev {
+    background: url("https://m.modetour.com/icons/radialMenu/icon_m_left_26.svg");
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    margin-top: -13px;
+    left: 5px;
+}
+.recently_viewed_items .swiper-button-next,
+.wishlist .swiper-button-next,
+.reservation_details .swiper-button-next {
+    background: url("https://m.modetour.com/icons/radialMenu/icon_m_right_26.svg");
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    margin-top: -13px;
+    right: 10px;
+    left: auto;
+}
+.recently_viewed_items_not {
+    width: 100%;
+}
+.recently_viewed_items_not .pop_in {
+    width: 73.82%;
+    height: 131px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    font-size: 14px;
+    color: #888;
+    font-weight: bold;
+    box-shadow: 0px 0px 6px #111;
+}
+.recently_viewed_items_not .pop_in .not {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recently_viewed_items_not .pop_in .not span {
+    color: #888;
+}
+.recently_viewed_items_details {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 11;
+}
+.recently_viewed_items_details .pop_wrap {
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+}
+.recently_viewed_items_details .pop_in {
+    height: 100vh;
+    position: relative;
+}
+.recently_viewed_items_details .pop_in .close {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+.recently_viewed_items_details .pop_in .close img {
+    width: 26px;
+    height: 26px;
+}
+.recently_viewed_items_details .tit {
+    padding: 9px 20px 37px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #111;
+    margin: 0;
+}
+.recently_viewed_items_details .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.recently_viewed_items_details .txt p {
+    font-size: 15px;
+    color: #aaa;
+}
+.recently_viewed_items_details .not .txt2 {
+    height: 288px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recently_viewed_items_details .not .txt2 p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #aaa;
+}
+.recently_viewed_items_details .pop_in .pop_wrap .link_wrap {
+    padding: 0 20px;
+}
+.recently_viewed_items_details .pop_in .pop_wrap .link_wrap a {
+    height: 52px;
+    background: #f5f6f6;
+    border-radius: 5px;
+    padding: 0 50px 0 60px;
+    margin-top: 12px;
+    font-size: 16px;
+    color: #111;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recently_viewed_items_details .pop_in .pop_wrap .link_wrap a::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("https://m.modetour.com/icons/radialMenu/searchHistory/icon_arrow_dark_18.svg") center / cover;
+}
+.recently_viewed_items_details .list {
+    padding: 30px 0 24px;
+}
+.recently_viewed_items_details .list .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.recently_viewed_items_details .list .tit .day {
+    font-size: 16px;
+    color: #111;
+}
+.recently_viewed_items_details .list .tit .all_reset {
+    font-size: 12px;
+    line-height: 14px;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+.recently_viewed_items_details .list + .list {
+    border-top: 8px #eee solid;
+}
+.recently_viewed_items_details .item {
+    padding: 24px 0;
+}
+.recently_viewed_items_details .item + .item {
+    border-top: 1px solid #f1f1f1;
+}
+.recently_viewed_items_details .recently_viewed_layout .img {
+    width: 100px;
+    height: 100px;
+}
+.recently_viewed_items_details .recently_viewed_layout .top .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 24px;
+}
+.recently_viewed_items_details .recently_viewed_layout {
+    padding: 0 20px;
+}
+.recently_viewed_items_details .recently_viewed_layout .top .right .right_top .txt1 {
+    font-size: 14px;
+}
+.recently_viewed_items_details .recently_viewed_layout .top .right .right_bottom {
+    font-size: 15px;
+}
+.wishlist {
+    width: 100%;
+}
+.wishlist .pop_in {
+    background: none;
+    position: relative;
+}
+.wishlist .swiper-slide .link {
+    display: block;
+    width: 73.82%;
+    margin: 0 auto 10px;
+    font-size: 13px;
+}
+.wishlist .swiper-slide .link span {
+    border-bottom: 1px #fff solid;
+    color: #fff;
+}
+.wishlist .swiper-slide .box {
+    width: 73.82%;
+    height: 136px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 0px 6px #111;
+    border-radius: 10px;
+}
+.wishlist .swiper-slide .box > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+}
+.reservation_details_login .btn_box [class^="btn_type"] {
+    height: 44px;
+}
+.reservation_details_login .btn_box + .btn_box {
+    margin-top: 12px;
+}
+.reservation_details_login .btn_box [class^="btn_type"].btn_type02 {
+    border: 1px #009c75 solid;
+    color: #009c75;
+}
+.reservation_details {
+    width: 100%;
+}
+.reservation_details .pop_in {
+    background: none;
+    position: relative;
+}
+.reservation_details .swiper-slide .box {
+    width: 73.82%;
+    min-height: 136px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 0px 6px #111;
+    border-radius: 10px;
+}
+.reservation_details .swiper-slide .box > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px 40px;
+}
+.reservation_details .swiper-slide .txt1 {
+    color: #009c75;
+    font-size: 13px;
+    padding: 8px 0;
+    font-weight: 600;
+    line-height: 19px;
+}
+.reservation_details .swiper-slide .txt2 {
+    color: #111;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.reservation_details .swiper-slide .txt3 {
+    color: #888;
+    font-size: 12px;
+    line-height: 19px;
+    margin-bottom: 4px;
+}
+.reservation_details .swiper-slide .txt4 {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.reservation_details .swiper-slide .txt5 {
+    color: #111;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+}
+.reservation_details .swiper-slide .txt5 small {
+    font-size: 14px;
+}
+.reservation_details_not .pop_in p {
+    color: #888;
+}
+/* [e] : 다이얼 팝업 */
