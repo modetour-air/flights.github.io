@@ -501,7 +501,9 @@
 .payment_layout .person_infor .middle .select_box .select_option {
     top: 40px;
 }
-
+.payment_layout input[type="text"].w100 {
+    width: 100%;
+}
 /* [s] : 할인쿠폰창 */
 .payment_layout .coupon_wrap {
     position: relative;
