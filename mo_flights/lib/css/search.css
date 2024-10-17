@@ -122,11 +122,16 @@
 }
 .ticket_container .banner_area .swiper-slide {
     overflow: hidden;
-    border-radius: 10px;
-    width: 100%;
+    border-radius: 8px;
+    padding-bottom: 13.7313%;
+    position: relative;
+    height: 0;
     height: 54px;
 }
 .ticket_container .banner_area .swiper-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
