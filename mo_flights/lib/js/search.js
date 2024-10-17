@@ -39,4 +39,13 @@ $(document).ready(function () {
             return value + "원";
         },
     });
+
+    // 배너 2024-10-17 추가
+    var banner_swiper = new Swiper(".banner_area .swiper", {
+        slidesPerView: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+    });
 });

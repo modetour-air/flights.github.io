@@ -91,7 +91,6 @@
             return false;
         });
 
-      
         // 팝업닫기
         $(".close").click(function () {
             $(this).closest(".layer_popup").hide();
@@ -99,20 +98,26 @@
         });
 
         //필터
-        $('#price_range').asRange({
+        $("#price_range").asRange({
             range: true,
             limit: true,
             step: 0.1,
             tip: {
-                active: 'onMove'
+                active: "onMove",
             },
             keyboard: true,
-            format: function(value) {
-                return value + '원';
-            }
+            format: function (value) {
+                return value + "원";
+            },
         });
-   
-            
-    });
 
+        // 배너 2024-10-17 추가
+        var banner_swiper = new Swiper(".banner_area .swiper", {
+            slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+        });
+    });
 })(jQuery);

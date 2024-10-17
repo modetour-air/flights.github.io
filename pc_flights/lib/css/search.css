@@ -407,18 +407,38 @@
     color: #8f9f9b;
     font-weight: 700;
 }
-.flight_cont .flight_list .banner_area {
-    display: flex;
-    justify-content: space-between;
-}
-.flight_cont .flight_list .banner_area .banner {
-    width: 440px;
+/* [s] 2024-10-17 수정 */
+.flight_cont .banner_area .swiper-slide {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
     height: 54px;
 }
-.flight_cont .flight_list .banner_area .banner img {
+.flight_cont .banner_area .swiper-slide img {
     width: 100%;
     height: 100%;
 }
+.flight_cont .banner_area .swiper-pagination-fraction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    height: 15px;
+    font-size: 9px;
+    color: #fff;
+    background: rgba(177, 177, 177, 0.4);
+    border-bottom-right-radius: 10px;
+}
+.flight_cont .banner_area .swiper-pagination-fraction span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0 2px;
+}
+/* [e] 2024-10-17 수정 */
 .flight_cont .flight_list .flight_item {
     border: 1px #d3dbd9 solid;
     border-radius: 10px;
