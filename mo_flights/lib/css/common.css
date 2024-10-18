@@ -1099,6 +1099,23 @@ input[type="checkbox"] {
     display: flex;
     height: 65px;
 }
+.bt_nav .nav_bar .nav_box {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 0 6px hsla(0, 0%, 7%, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bt_nav .nav_bar .nav_box .nav_item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+}
+.bt_nav .nav_bar .nav_box .nav_item button > img {
+    margin: 0 auto;
+}
 .bt_nav .nav_bar .left,
 .bt_nav .nav_bar .right {
     display: flex;
@@ -1205,6 +1222,7 @@ input[type="checkbox"] {
     display: inline-block;
     font-size: 11px;
     color: #111;
+    font-weight: 600;
 }
 .bt_nav .radial_menu {
     position: absolute;
