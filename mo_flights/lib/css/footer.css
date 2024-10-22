@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+footer {
+  background: #f5f6f6;
+  padding: 30px 0;
+}
+footer .f_top {
+  padding: 0 20px 38px;
+  position: relative;
+}
+footer .f_top:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e4e9e9;
+  height: 4px;
+}
+footer .f_top .sns {
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 24px;
+}
+footer .f_top .rule {
+  display: flex;
+  flex-wrap: wrap;
+  width: 242px;
+}
+footer .f_top .rule li {
+  position: relative;
+  padding-left: 8px;
+  margin-left: 8px;
+}
+footer .f_top .rule li:first-child,
+footer .f_top .rule li:nth-child(4) {
+  margin-left: 0;
+  padding-left: 0;
+}
+footer .f_top .rule li:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 2px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+}
+footer .f_top .rule li:first-child:before,
+footer .f_top .rule li:nth-child(4):before {
+  display: none;
+}
+footer .f_top .rule li.bold a {
+  font-weight: bold;
+}
+footer .f_top .rule li a {
+  font-size: 14px;
+  line-height: 24px;
+}
+footer .f_top .cs_btn {
+  color: #fff;
+  background: #009c75;
+  width: 66px;
+  height: 30px;
+  border-radius: 5px;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  margin-top: 5px;
+}
+footer .f_bottom {
+  padding: 30px 20px 0;
+}
+footer .f_bottom a.toggle_btn {
+  font-size: 14px;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+footer .f_bottom a.toggle_btn.active img {
+  transform: rotate(-180deg);
+}
+footer .f_bottom .hide {
+  padding-top: 16px;
+  display: none;
+}
+footer .f_bottom .hide ul li {
+  font-size: 13px;
+  line-height: 24px;
+}
+footer .f_bottom .hide a {
+  text-decoration: underline;
+  font-weight: 500;
+}
+footer .f_bottom .hide span {
+  margin-right: 10px;
+}
+footer .f_bottom .notice {
+  margin-top: 10px;
+}
+footer .f_bottom .notice li {
+  font-size: 12px;
+  line-height: 20px;
+}
+footer .f_bottom .notice li.bold {
+  font-weight: bold;
+}
+footer .f_bottom .copy {
+  line-height: 20px;
+  margin-top: 6px;
+  font-size: 12px;
+}
