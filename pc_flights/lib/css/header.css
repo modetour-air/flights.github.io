@@ -857,7 +857,8 @@ header .header_menu a {
     font-weight: 600;
     color: #111;
 }
-header .header_menu a:hover {
+header .header_menu a:hover,
+header .header_menu a:hover span {
     color: #009c75 !important;
 }
 header .header_menu .hamburger_menu {
