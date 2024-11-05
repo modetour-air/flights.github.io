@@ -63,4 +63,10 @@ $(document).ready(function () {
     $(".search_keyword").mouseout(function () {
         $(this).find(".layer_popup").hide();
     });
+
+    //메인로고
+    var main_logo = new Swiper(".main_logo", {
+        slidesPerView: 1,
+        loop: true,
+    });
 });
