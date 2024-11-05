@@ -48,7 +48,7 @@ header .header_wrap .header_cont {
 header .header_wrap .h_wrap {
     width: 1200px;
     margin: 0 auto;
-    padding-top: 22px;
+    padding-top: 21px;
 }
 header .header_main .header_search_area {
     display: flex;
@@ -946,4 +946,13 @@ header .header_menu .depth_st4 > li > a {
 header .header_menu .depth_st3 p {
     padding-bottom: 13px;
     border-bottom: 1px #111 solid;
+}
+
+header .main_logo .common_logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+header .main_logo .common_logo img {
+    width: 220px;
 }
