@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>전자 항공권 발행 확인서</title>
+        <style type="text/css" media="all">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html,
+            body {
+                border: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            @media print {
+                @page {
+                    size: 21cm 29.7cm; /*A4*/
+                    margin: 15mm; /* 여백 */
+                }
+
+                #eTicketReceipt {
+                    page-break-before: always;
+                }
+            }
+
+            .auto-style1 {
+                height: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="margin: 0 auto; width: 800px; font-family: dotum, 돋움, Helvetica, Arial, sans-serif">
+            <div style="border-bottom: 3px solid #006f54; overflow: hidden">
+                <h1 style="margin: 0; float: left; height: 50px; font-size: 14px; color: #000">
+                    <img src="//img.modetour.com/modetour/2014/common/hn_modetour.png" alt="모두투어" width="148" height="27" /><br />
+                    <p style="padding-top: 7px"></p>
+                </h1>
+                <h2 style="margin: 0; float: right; height: 50px; font-size: 18px; color: #000">
+                    <p style="padding-top: 15px; text-align: right">
+                        전자 항공권 발행 확인서<br />
+                        <span style="font-size: 12px">e-Ticket Passenger Itinerary &amp; Receipt</span>
+                    </p>
+                </h2>
+            </div>
+            <div style="margin: 10px 0">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 12px; border: 1px solid #ddd">
+                    <caption style="display: none">
+                        ■ 승객정보 (Passenger Information)
+                    </caption>
+                    <colgroup>
+                        <col width="40%" />
+                        <col width="60%" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" style="padding: 5px; text-align: left; border-top: 1px solid #ddd; background-color: #f2f2f2">항공사 <span style="font-weight: normal; font-size: 12px; color: #818181">(Airline)</span></th>
+                            <td style="padding: 0 5px; border-top: 1px solid #ddd; border-left: 1px solid #ddd">진에어항공</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="padding: 5px; text-align: left; border-top: 1px solid #ddd; background-color: #f2f2f2">항공사 예약번호 <span style="font-weight: normal; font-size: 12px; color: #818181">(Booking Number)</span></th>
+                            <td style="padding: 0 5px; border-top: 1px solid #ddd; border-left: 1px solid #ddd">B5L9KN</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="padding: 5px; text-align: left; border-top: 1px solid #ddd; background-color: #f2f2f2">모두투어 예약번호 <span style="font-weight: normal; font-size: 12px; color: #818181">(modetour Booking Reference)</span></th>
+                            <td style="padding: 0 5px; border-top: 1px solid #ddd; border-left: 1px solid #ddd">48855890</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="margin: 10px 0">
+                <h3 style="margin: 7px 0 5px; font-weight: bold; font-size: 14px; line-height: normal; color: #333; text-align: left">■ 여정 정보<span style="font-weight: normal; color: #818181">(Intnerary Information)</span></h3>
+
+                <div style="margin-bottom: 5px">
+                    <p style="margin-bottom: 1px; padding-left: 5px; font-weight: bold; font-size: 12px; height: 17px; line-height: 17px">
+                        <img src="//img.modetour.com/ModeLiveBooking/130913_air/ico/bu_gray_dot.gif" alt="" style="vertical-align: middle" />
+                        편명 <span style="font-weight: normal; color: #818181">(Flight)</span> <span style="color: #2988f4">LJ501</span>
+                    </p>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 12px; border: 1px solid #ddd; border-collapse: collapse">
+                        <caption style="display: none">
+                            ■ 여정 정보(Itinerary Information)
+                        </caption>
+                        <colgroup>
+                            <col width="17%" />
+                            <col />
+                            <col width="14%" />
+                            <col width="11%" />
+                            <col width="9%" />
+                            <col width="9%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-left: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">도시/공항</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">일자/시각</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">클래스</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">비행시간</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">예약상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 4px 5px 1px">출발 <span style="font-weight: normal; color: #818181">(Departure)</span></td>
+                                <td style="padding: 4px 5px 1px; font-weight: bold">김포</td>
+                                <td style="padding: 4px 5px 1px; border-left: 1px solid #ddd; font-weight: bold; text-align: center">03/12 06:05</td>
+                                <td rowspan="2" style="padding: 4px 5px 1px; border-left: 1px solid #ddd; text-align: center">I5</td>
+                                <td rowspan="2" style="padding: 4px 5px 1px; border-left: 1px solid #ddd; text-align: center">01:10</td>
+                                <td rowspan="2" style="padding: 4px 5px 1px; border-left: 1px solid #ddd; text-align: center">예약확정<br />(결제완료)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px 5px 1px; border-top: 1px solid #ddd">도착 <span style="font-weight: normal; color: #818181">(Arrival)</span></td>
+                                <td style="padding: 4px 5px 1px; border-top: 1px solid #ddd; font-weight: bold">제주</td>
+                                <td style="padding: 4px 5px 1px; border: 1px solid #ddd; border-right: 0; border-bottom: 0; font-weight: bold; text-align: center">03/12 07:15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="margin: 10px 0">
+                <h3 style="margin: 7px 0 5px; font-weight: bold; font-size: 14px; line-height: normal; color: #333; text-align: left">■ 탑승자 정보<span style="font-weight: normal; color: #818181">(Passenger Information)</span></h3>
+                <div style="margin-bottom: 5px">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 12px; border: 1px solid #ddd; border-collapse: collapse">
+                        <caption style="display: none">
+                            ■ 승객 정보(Passenger Information)
+                        </caption>
+                        <colgroup>
+                            <col width="15%" />
+                            <col width="10%" />
+                            <col width="20%" />
+                            <col width="50px" />
+                            <col width="50px" />
+                            <col width="50px" />
+                            <col width="50px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; background-color: #f8f8f8; font-weight: normal">이름</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">편명</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">항공권 번호</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">항공이용료</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">세금</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">유류할증료</th>
+                                <th scope="col" style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">최종지불금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">김유진</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">LJ501</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: left">7188782951927</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">21,900</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">4,000</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">7,700</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">33,600</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">정수아</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">LJ501</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: left">7188782951928</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">19,800</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">2,000</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">7,700</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">29,500</td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">정예원</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal">LJ501</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: left">7188782951929</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">0</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">0</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">0</td>
+                                <td style="padding: 3px 5px 1px; border: 1px solid #ddd; border-top: 0; border-right: 0; border-bottom-width: 2px; background-color: #f8f8f8; font-weight: normal; text-align: right">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 style="margin: 7px 0 5px; font-weight: bold; font-size: 14px; line-height: normal; color: #333; text-align: left">■ e-티켓 조건 사항<span style="font-weight: normal; color: #818181">(e-Ticket Condition Details)</span></h3>
+            <p style="margin-bottom: 10px; font-size: 14px; height: 19px; line-height: 19px">본 e-티켓 확인증과 함께 제공된 계약조건을 반드시 참고하여 주시기 바랍니다.</p>
+            <div style="padding: 5px; font-size: 12px; border: 1px solid #ddd">
+                <ul style="list-style: none; font-family: dotum, 돋움, verdana">
+                    <li>
+                        ▶ 국내선 항공권은 모두 e-ticket이므로, 종이항공권 없이 공항의 해당 항공사 카운터에서 항공예약번호와 신분증 (탑승자 모두 신분증 지참)
+                        <br />
+                        &nbsp;&nbsp;&nbsp;확인 후 간편하게 티켓을 발급 받으실 수 있습니다.
+                    </li>
+                    <li>▶ 예매 당시 신분할인(소아, 제주도민, 장애인등)을 받으신 경우에는 반드시 할인증빙서류를 소지하여 탑승수속 시에 제시하여 주시기 바랍니다.</li>
+                    <li>▶ 탑승 수속 마감시간은 출발 30분 전으로 규정되어 있으나, 여유있게 출발 1시간 전 까지 탑승 수속을 마쳐 주시기 바랍니다.</li>
+                    <li>▶ 항공편 일정은 정부인가 조건이며, 항공사의 부득이한 사유로 사전 예고 없이 변경될 수 있사오니 이점 양해하여 주시기 바랍니다.</li>
+                    <li>▶ 예약하신 항공권은 타인에게 양도 할 수 없습니다.</li>
+                    <li>▶ 구매하신 항공권의 경우 환불시 환불 수수료및 예약 위약금이 징수되고 있으므로 참고하시기 바랍니다.</li>
+                    <li>
+                        ▶ 본 e-티켓 확인증은 e-티켓의 정보 등을 확인하기 위하여 제공되는 서면에 불과하고 소지인에게 당해 운송 관련 어떠한 법적 권리를
+                        <br />
+                        &nbsp;&nbsp;&nbsp;부여 하지 않습니다.
+                    </li>
+                    <li>▶ 본 e-티켓 확인증을 임의로 수정 및 사용시 모두투어는 책임을 지지 않습니다.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin: 7px 0 5px; font-weight: bold; font-size: 14px; line-height: normal; color: #333; text-align: left">■ 취소/환불규정</h3>
+                <div style="padding: 5px; border: 1px solid #ddd">
+                    <h4 style="line-height: 19px; font-family: dotum, 돋움, verdana; text-align: left">
+                        <strong>01. 확정후 예약변경</strong>
+                    </h4>
+                    <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                        <li>1) 항공권 예약변경은 불가능하며, 예약한 항공권을 취소 후 항공권을 재 구매하셔야 합니다.</li>
+                        <li>2) 예약취소시, 취소시점에 따라 환불수수료가 발생할 수 있습니다.</li>
+                        <li>
+                            3) 예약취소는 예약확인/결제 페이지에서 예약 취소가 가능하며, 탑승객 일부 취소는 상담원을 통하여
+                            <br />
+                            &nbsp;&nbsp;&nbsp; 예약 취소 요청 해주시기 바랍니다 (인터넷 취소시 전체 인원이 취소 됩니다.)
+                        </li>
+                        <li>
+                            <font color="#00008C"><b>4) 결항 건을 제외한 유선 전체 취소 환불 시 항공사수수료 이외에 여행사대행수수료가 발생할수 있으니 마이페이지를 이용해주시기 바랍니다.(1인편도당 / 5,000원)</b></font>
+                        </li>
+                        <li>
+                            <font color="#00008C"><b>5) 왕복 타 항공사 일 경우 결항 수수료 면제가 불가 할 수 있으니 면제를 원하시면 동일한 항공사로 예약 부탁드립니다.</b></font>
+                        </li>
+                    </ol>
+                    <h4 style="line-height: 19px; font-family: dotum, 돋움, verdana; text-align: left">
+                        <strong>02. 결제취소 및 환불수수료</strong>
+                    </h4>
+                    <div style="padding: 0; margin: 20px 0 10px; font-size: 12px; line-height: 19px">
+                        <p>※ 모든 항공사의 취소 수수료는 편도 1인 기준입니다.</p>
+                        <p>※ 사전좌석배정 또는 체크인을 한 항공권은 항공사에 좌석배정 및 체크인 취소 후 마이페이지 취소 진행 바랍니다.</p>
+                        <p>※ 항공권 구매 당일이라도 비행기 출발 후 취소건은 수수료가 부과됩니다.</p>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㄱ. 대한항공</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="red"><b>발권일 : 24년 07월 01일 이후 발권</b></font>
+                            </li>
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스/정상가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공편 출발 30분 전 까지 : 3,000원</li>
+                            <li>3) 탑승수속 마감 후 (항공편 출발 30분 전 이후) : 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공편 출발 30분 전 까지: 5,000원</li>
+                            <li>3) 탑승수속 마감 후 (항공편 출발 30분 전 이후): 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[특가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공편 출발 30분 전 까지: 7,000원</li>
+                            <li>3) 탑승수속 마감 후 (항공편 출발 30분 전 이후): 15,000원</li>
+                            <li>　</li>
+                            <li>
+                                <font color="red"><b>발권일 : 24년 06월 30일까지</b></font>
+                            </li>
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스/정상가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공편 출발 30분 전 까지 : 3,000원</li>
+                            <li>3) 탑승수속 마감 후 (항공편 출발 30분 전 이후) : 11,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공편 출발 30분 전 까지: 5,000원</li>
+                            <li>3) 탑승수속 마감 후 (항공편 출발 30분 전 이후): 13,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[특가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공편 출발 30분 전 까지: 7,000원</li>
+                            <li>3) 탑승수속 마감 후 (항공편 출발 30분 전 이후): 15,000원</li>
+                        </ol>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㄴ. 아시아나항공</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스/정상가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공기 출발 전 : 3,000원</li>
+                            <li>3) 항공기 출발 후 : 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공기 출발 전 : 8,000원</li>
+                            <li>3) 항공기 출발 후 : 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[특가]</b></font>
+                            </li>
+                            <li>1) 구매당일 : 0원</li>
+                            <li>2) 항공기 출발 전 : 12,000원</li>
+                            <li>3) 항공기 출발 후 : 15,000원</li>
+                        </ol>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㄷ. 티웨이항공</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스]</b></font>
+                            </li>
+                            <li>1) 예약 당일 (예약일자기준) : 0원</li>
+                            <li>2) ~ 출발 61일 전 : 1,000원</li>
+                            <li>3) 출발 60일 전 ~ 출발 31일 전 : 4,000원</li>
+                            <li>4) 출발 30일전 ~ 출발 8일전 : 6,000원</li>
+                            <li>5) 출발 7일전 ~ 출발 2일전 : 11,000원</li>
+                            <li>6) 출발 1일전 ~ 출발 전 : 18,000원</li>
+                            <li>7) 출발 이후 : 20,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[정상가]</b></font>
+                            </li>
+                            <li>1) 예약 당일 (예약일자기준) : 0원</li>
+                            <li>2) ~ 출발 61일 전 : 1,000원</li>
+                            <li>3) 출발 60일 전 ~ 출발 31일 전 : 3,000원</li>
+                            <li>4) 출발 30일전 ~ 출발 8일전 : 6,000원</li>
+                            <li>5) 출발 7일전 ~ 출발 2일전 : 11,000원</li>
+                            <li>6) 출발 1일전 ~ 출발 전 : 13,000원</li>
+                            <li>7) 출발 이후 : 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가/특가]</b></font>
+                            </li>
+                            <li>1) 예약 당일 (예약일자기준) : 0원</li>
+                            <li>2) ~ 출발 61일 전 : 2,000원</li>
+                            <li>3) 출발 60일 전 ~ 출발 31일 전 : 4,000원</li>
+                            <li>4) 출발 30일전 ~ 출발 8일전 : 7,000원</li>
+                            <li>5) 출발 7일전 ~ 출발 2일전 : 12,000원</li>
+                            <li>6) 출발 1일전 ~ 출발 전 : 14,000원</li>
+                            <li>7) 출발 이후 : 15,000원</li>
+                        </ol>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㄹ. 진에어</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스/정상가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 : 0 원</li>
+                            <li>2) ~ 출발 61일 전 : 1,000 원</li>
+                            <li>3) 출발 60일 ~ 31일 전 : 3,000 원</li>
+                            <li>4) 출발 30일 ~ 15일 전 : 4,000 원</li>
+                            <li>5) 출발 14일 ~ 2일 전 : 8,000 원</li>
+                            <li>6) 출발 1일 전 ~ 출발시간 전 : 10,000 원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 15,000 원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 : 0 원</li>
+                            <li>2) ~ 출발 61일 전 : 2,000 원</li>
+                            <li>3) 출발 60일 ~ 31일 전 :4,000 원</li>
+                            <li>4) 출발 30일 ~ 15일 전 : 6,000 원</li>
+                            <li>5) 출발 14일 ~ 2일 전 :9,000 원</li>
+                            <li>6) 출발 1일 전 ~ 출발시간 전 : 12,000 원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 15,000 원</li>
+                            <li>
+                                <font color="#0074cf"><b>[특가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 : 0 원</li>
+                            <li>2) ~ 출발 61일 전 : 3,000 원</li>
+                            <li>3) 출발 60일 ~ 31일 전 : 5,000 원</li>
+                            <li>4) 출발 30일 ~ 15일 전 : 7,000 원</li>
+                            <li>5) 출발 14일 ~ 2일 전 : 10,000 원</li>
+                            <li>6) 출발 1일 전 ~ 출발시간 전 : 14,000 원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 15,000 원</li>
+                            <li>　</li>
+                            <li>
+                                <font color="red"><b>&lt;김포-제주, 부산-제주, 청주-제주, 광주-제주 노선&gt;</b></font>
+                            </li>
+                            <li>
+                                <font color="red"><b>*환불접수시행일 : 2024년 12월 12일부터</b></font>
+                            </li>
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스/정상가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 : 0원</li>
+                            <li>2) ~ 출발 31일전 : 1,000원</li>
+                            <li>3) 출발 30일 ~ 15일전 : 2,000원</li>
+                            <li>4) 출발 14일 ~ 7일전 : 3,000원</li>
+                            <li>5) 출발 6일 ~ 2일전 : 4,000원</li>
+                            <li>6) 출발 1일전 ~ 출발시간전 : 8,000원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 14,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 : 0원</li>
+                            <li>2) ~ 출발 31일전 : 2,000원</li>
+                            <li>3) 출발 30일 ~ 15일전 : 3,000원</li>
+                            <li>4) 출발 14일 ~ 7일전 : 4,000원</li>
+                            <li>5) 출발 6일 ~ 2일전 : 5,000원</li>
+                            <li>6) 출발 1일전 ~ 출발시간전 : 10,000원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW : 14,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[특가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 : 0원</li>
+                            <li>2) ~ 출발 31일전 : 3,000원</li>
+                            <li>3) 출발 30일 ~ 15일전 : 4,000원</li>
+                            <li>4) 출발 14일 ~ 7일전 : 6,000원</li>
+                            <li>5) 출발 6일 ~ 2일전 : 7,000원</li>
+                            <li>6) 출발 1일전 ~ 출발시간전 : 12,000원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 14,000원</li>
+                        </ol>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㅁ. 제주항공</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#0074cf"><b>[비즈니스]</b></font>
+                            </li>
+                            <li>1) 구매 후 24시간 이내 취소 : 0원</li>
+                            <li>2) ~ 출발 61일 전 1,000원</li>
+                            <li>3) 출발 60일 전 ~ 출발 31일 전 3,000원</li>
+                            <li>4) 출발 30일~ 출발 15일전 5,000원</li>
+                            <li>5) 출발 14일~출발 8일전 9,000원</li>
+                            <li>5) 출발 7일~출발 2일전 11,000원</li>
+                            <li>6) 출발 1일 전(~23:54까지) 13,000원</li>
+                            <li>7) 출발 당일 & 출발 시간 이후 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[정상가/할인가/특가]</b></font>
+                            </li>
+                            <li>1) 구매 후 24시간 이내 취소 : 0원</li>
+                            <li>2) ~ 출발 61일 전 2,000원</li>
+                            <li>3) 출발 60일 전 ~ 출발 31일 전 4,000원</li>
+                            <li>4) 출발 30일~ 출발 15일전 6,000원</li>
+                            <li>5) 출발 14일~출발 8일전 10,000원</li>
+                            <li>5) 출발 7일~출발 2일전 12,000원</li>
+                            <li>6) 출발 1일 전(~23:54까지) 14,000원</li>
+                            <li>7) 출발 당일 & 출발 시간 이후 15,000원</li>
+                            <li>
+                                <font color="red"
+                                    ><b
+                                        >※ 결제 당일 예약 취소시 수수료 면제(취소/환불은 시스템 점검으로 인해 매일 23:55~24:05까지 불가.<br />
+                                        구매 후 구매당일 23:54까지 취소에 한해 취소수수료가 부과되지 않음)</b
+                                    ></font
+                                >
+                            </li>
+                            <li>※ 제주 항공 스케줄 변경, 결항 등 으로 인해 변경/취소 요청하실 경우, 예약하신 여행사에 유선상 요청 바랍니다.( 직접 마이페이지상 환불 후 적용되는 수수료는 면제 불가합니다.)</li>
+                            <li>※ 제주항공 공항지점이나 제주항공 예약센터를 이용하여 취소 시에는 환불수수료를 포함한 1인 편도 5,000원의 서비스 수수료가 부과 됩니다</li>
+                        </ol>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㅂ. 에어부산</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#0074cf"><b>[정상가]</b></font>
+                            </li>
+                            <li>1) 구매 당일[매일](~23:49분까지) / [마지막 주 화요일](~22:59분까지) : 0 원</li>
+                            <li>2) ~ 출발 61일 전 : 1,000원</li>
+                            <li>3) 출발 60일 ~ 31일 전 : 1,000원</li>
+                            <li>4) 출발 30일 ~ 15일 전 : 3,000원</li>
+                            <li>5) 출발 14일 ~ 3일 전 : 5,000원</li>
+                            <li>6) 출발 2일 전 ~ 출발 30분 전 : 10,000원</li>
+                            <li>7) 탑승수속 마감 후 (항공편 출발 30분 전 이후) : 15,000원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인가/특가]</b></font>
+                            </li>
+                            <li>1) 구매 당일[매일](~23:49분까지) / [마지막 주 화요일](~22:59분까지) : 0 원</li>
+                            <li>2) ~ 출발 61일 전 : 2,000원</li>
+                            <li>3) 출발 60일 ~ 31일 전 : 4,000원</li>
+                            <li>4) 출발 30일 ~ 15일 전 : 6,000원</li>
+                            <li>5) 출발 14일 ~ 3일 전 : 9,000원</li>
+                            <li>6) 출발 2일 전 ~ 출발 30분 전 : 12,000원</li>
+                            <li>7) 탑승수속 마감 후 (항공편 출발 30분 전 이후) : 15,000원</li>
+                            <li>　</li>
+                            <li>
+                                <font color="red"><b>&lt;대상노선: 김포-제주, 부산-제주 / 구매일 2024년 12월 12일 발권부터&gt;</b></font>
+                            </li>
+                            <li>
+                                <font color="#0074cf"><b>[정상가/할인가/특가]</b></font>
+                            </li>
+                            <li>1) 구매 당일[매일](~23:49분까지) / [마지막 주 화요일](~22:59분까지) : 0원</li>
+                            <li>2) ~ 출발 31일 전 : 1,000원</li>
+                            <li>3) 출발 30일 전 ~ 1일전 : 3,000원</li>
+                            <li>4) 출발 당일 30분 전 : 10,000원</li>
+                            <li>5) 탑승수속 마감 후 (항공편 출발 30분전 이후) : 15,000원</li>
+                            <li>• 매일 점검시간 : 23:50 ~ 00:10 (20분) / 매월 마지막 주 화요일 점검 : 23:00 ~ 00:10 (1시간10분)</li>
+                            <li>(점검시간대 취소시점으로 인한 취소수수료 면제,변경은 불가)</li>
+                        </ol>
+                        <p style="padding: 0; margin: 0; font-weight: bold; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana">ㅇ. 에어서울</p>
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#0074cf"><b>[정상가]</b></font>
+                            </li>
+                            <li>1) 구매 당일 (~23:49까지) : 0 원</li>
+                            <li>2) ~ 출발 61일전 : 1,000 원</li>
+                            <li>3) 출발 60일 전 ~ 31일 전 : 2,000 원</li>
+                            <li>4) 출발 30일 전 ~ 15일 전 : 3,000 원</li>
+                            <li>5) 출발 14일 전 ~ 2일 전 : 5,000 원</li>
+                            <li>6) 출발 1일 전 ~ 출발 시간 전 : 12,000 원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 15,000 원</li>
+                            <li>
+                                <font color="#0074cf"><b>[할인석/특가석]</b></font>
+                            </li>
+                            <li>1) 구매 당일 (~23:49까지) : 0 원</li>
+                            <li>2) ~ 출발 61일전 : 2,000 원</li>
+                            <li>3) 출발 60일 전 ~ 31일 전 : 4,000 원</li>
+                            <li>4) 출발 30일 전 ~ 15일 전 : 6,000 원</li>
+                            <li>5) 출발 14일 전 ~ 2일 전 : 8,000 원</li>
+                            <li>6) 출발 1일 전 ~ 출발 시간 전 : 13,000 원</li>
+                            <li>7) 항공편 출발 후 (NO-SHOW) : 15,000 원</li>
+                            <li>
+                                <font color="#0074cf"><b>[특가석 A]</b></font>
+                            </li>
+                            <li>구매 당일 (~23:49까지) : 0 원</li>
+                            <li>구매 다음 날 ~ 항공편 출발 후 (NO-SHOW) : 15,000 원</li>
+                            <li>
+                                <font color="red"
+                                    ><b
+                                        >• 항공사 시스템 점검 시간에는 (매일 23:50~24:10) 구매 및 환불 불가
+                                        <br />
+                                        (점검시간대 취소시점으로 인한 취소수수료 면제,변경은 불가)</b
+                                    ></font
+                                >
+                            </li>
+                            <li>• 구매당일만(~23시49분까지) 취소 수수료면제</li>
+                        </ol>
+                    </div>
+                    <h4 style="line-height: 19px; font-family: dotum, 돋움, verdana; text-align: left">
+                        <strong>03. 취소방법</strong>
+                    </h4>
+                    <div style="padding: 0; margin: 20px 0 10px; font-size: 12px; line-height: 19px">
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>
+                                <font color="#00008C"><b>※ 결항 건을 제외한 유선 전체 취소 환불 시 항공사수수료 이외에 여행사대행수수료가 발생할수 있으니 마이페이지를 이용해주시기 바랍니다.(1인편도당 / 5,000원)</b></font>
+                            </li>
+                            <li>1) 출발 전 취소</li>
+                            <li>* 결제전 예약취소는 예약 확인/결제 페이지에서 취소처리가 가능합니다.</li>
+                            <li>* 모두투어 웹사이트[마이페이지>예약확인/결제]페이지에서 항공권 취소처리가 가능합니다.</li>
+                            <li>* 11번가 모바일 구매 항공권은 11번가 모바일[로그인-여행-나의11번가-항공권예약내역] 페이지에서만 취소처리가 가능합니다.</li>
+                            <li>* 제주항공, 이스타항공사 경우 공항 지점 또는 예약센터를 이용하시어 취소시에는 별도의 서비스수수료가 추가 부과됩니다.</li>
+                            <li>* 탑승객 중 일부 승객의 취소는 반드시 상담원을 통하여 환불 처리하시기 바랍니다. (인터넷 취소시 전체인원 취소됩니다)</li>
+                            <li>2) 출발 후 취소 : 여행사 업무시간 (전화상담, 평일 9시~18시 / 채팅상담, 평일 9시~18시) 처리 가능 합니다.</li>
+                            <li>3) 여행사 업무시간 외에 긴급한 항공권 문의는 예약하신 항공사를 통해 문의 해주시기 바랍니다.</li>
+                            <li>대한항공 1588-2001 (07:00 ~ 19:00)</li>
+                            <li>아시아나항공 1588-8000 (07:00 ~ 19:00)</li>
+                            <li>티웨이항공 1688-8686 (07:00 ~ 19:00)</li>
+                            <li>진에어 1600-6200 (09:00 ~ 18:00)</li>
+                            <li>제주항공 1599-1500 (09:00 ~ 19:00)</li>
+                            <li>에어부산 1666-3060 (08:00 ~ 19:00)</li>
+                            <li>에어서울 1800-8100 (09:00 ~ 18:00)</li>
+                        </ol>
+                    </div>
+                    <h4 style="line-height: 19px; font-family: dotum, 돋움, verdana; text-align: left">
+                        <strong>04. 환불소요기간</strong>
+                    </h4>
+                    <div style="padding: 0; margin: 20px 0 10px; font-size: 12px; line-height: 19px">
+                        <ol style="padding: 0 20px; margin: 10px 0; list-style: none; font-size: 12px; line-height: 19px; font-family: dotum, 돋움, verdana; letter-spacing: -1px">
+                            <li>1) 취소후 카드사에 환불 확인까지 2주정도 소요되며 고객님의 카드 결제일에 따라 신용카드 대금이 청구 될 수 있습니다.</li>
+                            <li>2) 만약, 대금이 청구될 경우 다음달에 마이너스 청구로 처리됩니다.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
