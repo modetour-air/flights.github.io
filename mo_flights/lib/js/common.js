@@ -45,7 +45,9 @@ $(document).ready(function () {
         $(this).addClass("on").siblings().removeClass("on").closest(".tab_area").find(".con_group").children(".con").eq(idx).addClass("on").siblings().removeClass("on");
         return false;
     });
-    //탭 라인
+    //탭 라인 - 2025-05-26 수정
+    var line_w = $(".line_tab .btn").width();
+    $(".line_tab .line").css({ width: line_w });
     $(".line_tab a").click(function () {
         var position = $(this).position();
         var width = $(this).width();
